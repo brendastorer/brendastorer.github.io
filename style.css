@@ -1,14 +1,54 @@
 body {
-  background-image: url("images/nyc-skyline2.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  line-height: 1.5;
 }
 
-header.page-top {
-  background-color: #37445a;
-  height: 50px;
+h1 {
+  font-size: 2.6em;
 }
 
-h1, h2, h3, h4 {
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
+}
+
+.sticky-header {
+  background-color: rgba(58, 46, 146, .9);
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: right;
+}
+
+.site-navigation a {
+  color: white;
+  font-size: .875em;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.site-navigation a:hover {
+  color: #b3a7cd;
+}
+
+section {
+  background: url("images/nyc-skyline2.jpg") no-repeat bottom left;
+  background-size: 100%;
+  height: 800px;
+  text-align: center;
+}
+
+section h1 {
+  color: rgb(58, 46, 146);
+  padding: 100px 50px;
+  text-transform: lowercase;
 }
