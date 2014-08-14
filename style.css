@@ -1,0 +1,14 @@
+body {
+  background-image: url("images/nyc-skyline2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header.page-top {
+  background-color: #37445a;
+  height: 50px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+}
