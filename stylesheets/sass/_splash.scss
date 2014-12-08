@@ -1,0 +1,43 @@
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  color: #50bc8a;
+  font-family: "Proxima Nova", helvetica, arial, sans-serif;
+  font-size: 20px;
+  height: 100%;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  @include transform(translateY(-50%));
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+}
+
+a {
+  color: #50bc8a;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0681b1;
+}
+
+.logo {
+  height: auto;
+  max-width: 285px;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+li {
+  display: inline-block;
+  margin: 0 1em 1em 1em;
+}

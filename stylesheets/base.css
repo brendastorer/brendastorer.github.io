@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif; }
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url("../fonts/proxima_nova_reg-webfont.eot");
+  src: local("☺︎"), url("../fonts/proxima_nova_reg-webfont.woff") format("woff"), url("../fonts/proxima_nova_reg-webfont.otf") format("opentype"), url("../fonts/proxima_nova_reg-webfont.svg#proxima-nova") format("svg"); }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  color: #50bc8a;
+  font-family: "Proxima Nova", helvetica, arial, sans-serif;
+  font-size: 20px;
+  height: 100%;
+  padding: 1em;
+  text-align: center; }
+
+main {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin: 0 auto;
+  position: relative;
+  top: 50%; }
+
+a {
+  color: #50bc8a;
+  text-decoration: none; }
+
+a:hover {
+  color: #0681b1; }
+
+.logo {
+  height: auto;
+  max-width: 285px; }
+
+h2 {
+  font-size: 1.2em;
+  margin: 1em 0; }
+
+li {
+  display: inline-block;
+  margin: 0 1em 1em 1em; }
