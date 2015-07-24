@@ -1,0 +1,81 @@
+/**
+	Brenda Storer
+	CSSS slideshow theme
+
+	Based on basic slideshow theme by
+	@author Lea Verou
+	@version 1.0
+*/
+
+html {
+	background: $soft-gray;
+}
+
+#intro {
+	background-color: $dark-green;
+}
+
+#intro::before {
+  content: "";
+  background: url(../img/rocky.jpg) top center;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+}
+
+.slide {
+	@extend .pb-pattern;
+	@extend .o-lines-light;
+	@extend .over-img;
+	background-color: $orange;
+	position: absolute;
+	padding: 0 6% 2%;
+	color: white;
+
+	&:nth-child(3n+2) {
+		background-color: $pink;
+	}
+
+	&:nth-child(3n+3) {
+		background-color: $dark-green;
+	}
+
+	h1 {
+		@extend %vertical-center;
+		font-size: 400%;
+		line-height: 1;
+		text-align: center;
+		width: 100%;
+	}
+
+  a {
+    position: relative;
+    z-index: 10;
+  }
+
+  .attribution {
+    bottom: 5px;
+    font-size: 0.8rem;
+    position: fixed;
+    right: 5px;
+    text-decoration: none;
+    z-index: 100;
+  }
+}
+
+#indicator {
+	background: rgba(255, 255, 255, .6);
+	color: black;
+	text-shadow: none;
+}
+
+#timer {
+	background-color: rgba(255, 255, 255, .3);
+	top: auto;
+	bottom: 0;
+}

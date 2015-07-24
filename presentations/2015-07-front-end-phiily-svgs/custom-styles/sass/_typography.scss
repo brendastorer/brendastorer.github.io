@@ -1,0 +1,40 @@
+body {
+  font-family: "Varela Round", helvetica, sans-serif;
+}
+
+h1, h2 {
+  font-family: "league-gothic", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+
+h1 {
+  font-size: 400%;
+}
+
+h2 {
+  font-size: 270%;
+}
+
+h3, h4, h5, h6 {
+  font-family: "Varela Round", sans-serif;
+}
+
+p, ul, ol {
+  font-size: 120%;
+  line-height: 1.1;
+}
+
+ul, ol {
+  list-style-position: inside;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 2%;
+
+    ul {
+      list-style-type: disc;
+      font-size: 90%;
+    }
+  }
+}

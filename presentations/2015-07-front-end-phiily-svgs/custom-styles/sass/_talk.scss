@@ -1,0 +1,31 @@
+.tall-image {
+  @extend %layer-top;
+  height: 90%;
+}
+
+img {
+  border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.svg-coordinates {
+  @extend %layer-top;
+  background-color: $soft-white;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.image-wrapper {
+  @extend %layer-top;
+  @extend %vertical-center;
+  text-align: center;
+  width: 100%;
+
+  img {
+    width: 50%;
+  }
+}
+
+.svg-example {
+  @extend %layer-top;
+  width: 50%;
+}

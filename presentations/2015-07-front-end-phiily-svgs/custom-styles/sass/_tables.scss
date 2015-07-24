@@ -1,0 +1,26 @@
+table {
+  @extend %layer-top;
+  background-color: $soft-white;
+  border-collapse: collapse;
+  color: $blue-black;
+  font-size: 75%;
+  width: 100%;
+
+  code {
+    border: none;
+  }
+}
+
+td {
+  border: 5px solid $soft-gray;
+  padding: .2em .4em;
+
+  pre {
+    border: none;
+  }
+}
+
+.header-row {
+  background-color: $soft-gray;
+  font-size: 120%;
+}
