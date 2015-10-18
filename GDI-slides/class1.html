@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Class 1 ~ Intermediate HTML/CSS ~ Girl Develop IT</title>
+
+		<meta name="description" content="This is the official Girl Develop It Intermediate Core HTML/CSS curriculum. It was developed through the contributions of Julie Pagano, Jen Myers, Alexis Goldstein and Izzy Johnston.
+
+    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+		<meta name="author" content="Girl Develop It">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+    <!-- For the slides -->
+    <link rel="stylesheet" href="css/slides.css">
+		<!-- If use the PDF print sheet so students can print slides-->
+
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <!-- Opening slide -->
+        <section>
+          <img src="images/gdi_logo_badge.png" alt="" />
+          <h3>Intermediate HTML and CSS</h3>
+          <h4>Class 1</h4>
+        </section>
+
+        <!-- Welcome-->
+        <section>
+          <h3>Welcome!</h3>
+          <div class="left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
+        </section>
+        <section>
+          <h3>Welcome!</h3>
+          <div class="left-align">
+          <p class="blue">Tell us about yourself.</p>
+          <ul>
+            <li>Who are you?</li>
+            <li>What do you hope to get out of the class?</li>
+            <li>What is your favorite dinosaur?</li>
+          </ul>
+          </div>
+        </section>
+
+        <!-- Review Terms-->
+        <section>
+         <h3>Review: Terms</h3>
+         <ul>
+           <li>
+            <div class="green">Web design</div>
+            <div>The process of planning, structuring and creating a website</div>
+           </li>
+           <li>
+            <div class="green">Web development</div>
+            <div>The process of programming dynamic web applications</div>
+           </li>
+           <li>
+            <div class="green">Front end</div>
+            <div>The outwardly visible elements of a website or application</div>
+           </li>
+           <li>
+            <div class="green">Back end</div>
+            <div>The inner workings and functionality of a website or application.</div>
+           </li>
+         </ul>
+        </section>
+
+        <!-- Review Tools -->
+        <section>
+          <h3>Review: Tools</h3>
+          <ul>
+            <li>
+              <div class="yellow">Browser</div>
+              <div>Chrome</div>
+              <div>Firefox</div>
+             </li>
+             <li>
+              <div class="yellow">Development Toolkit</div>
+              <div>Chrome - Inspector</div>
+              <div>Firefox - Firebug</div>
+             </li>
+             <li>
+              <div class="yellow">Text Editor</div>
+              <div>TextWrangler - Mac</div>
+              <div>Notepad ++ - Windows</div>
+              <div>Sublime Text - Mac or Windows</div>
+             </li>
+          </ul>
+        </section>
+
+        <!-- Review Roles of HTML v CSS -->
+        <section>
+          <h3>Review: Anatomy of a website</h3>
+          <div class="blue"> Your Content</div>
+          <div><span class="blue">+ HTML: </span>Structure</div>
+          <div><span class="blue">+ CSS: </span>Presentation</div>
+          <div class="blue">= Your Website</div>
+          <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
+        </section>
+        <section>
+          <h3>Review: Anatomy of a website</h3>
+          <div class="yellow"> Concrete example</div>
+          <ul>
+            <li class="fragment"><p>A paragraph is your content</p></li>
+            <li class="fragment">
+              <div style="font-size: 80%">Putting your content into an HTML tag to make it look like a paragraph is Structure</div>
+              <pre><code class="html">&lt;p>A paragraph is your content&lt;/p></code></pre>
+            </li>
+            <li class="fragment">
+              <div style="font-size: 80%;">Make the font of your paragraph blue and 18px is presentation</div>
+              <p class="blue">A paragraph is your content</p>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Review HTML element-->
+        <section>
+         <h3>Review: Anatomy of an HTML element</h3>
+         <ul>
+            <li class="fragment">
+              Element
+              <ul>
+               <li>An individual component of HTML</li>
+               <li>Paragraph, Table, List</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Tag
+              <ul>
+                <li>Markers that signal the beginning and end of an element</li>
+                <li>Opening tag and Closing Tag
+                  <pre><code class="html">&lt;tagname>Stuff in the middle&lt;/tagname></code></pre>
+                </li>
+                <li>
+                  <pre><code class="html">&lt;p>This is a sample paragraph.&lt;/p></code></pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Review: Anatomy of an HTML element</h3>
+          <ul>
+            <li class="fragment">
+              Container Element
+              <ul>
+                <li>An element that can contain other elements or content</li>
+                <li>A paragraph (&lt;p>) contains text</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Stand Alone Element
+              <ul>
+                <li>An element that cannot contain anything else</li>
+                <li>
+<pre><code class="html">&lt;br/>
+&lt;img/></code></pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Review: Anatomy of an HTML element</h3>
+          <ul>
+            <li class="fragment">
+              Attribute
+              <ul>
+                <li>Each element can have a variety of attributes</li>
+                <li>Language, style, identity, source</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              Value
+              <ul>
+                <li>Value is the value assigned to a given
+                attribute.</li>
+                <li>
+                  <pre><code contenteditable class="html">&lt;p lang="fr">C'est la vie&lt;/p>
+&lt;img src="my.picture.jpg"/></code></pre>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <!-- What is CSS-->
+        <section>
+          <h3>CSS: Review</h3>
+          <div class="left-align">
+            <p>CSS = Cascading Style Sheets</p>
+            <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
+            <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
+          </div>
+        </section>
+
+
+        <!-- The CSS Rule-->
+        <section>
+          <h3>Review: The CSS Rule</h3>
+<pre><code class="html">selector {
+  property: value;
+}</code></pre>
+          <div class="left-align">
+            <p>A block of CSS is a rule block.</p>
+            <p>The rule starts with a selector.</p>
+            <p>It has sets of properties and values.</p>
+            <p>A property-value pair is a declaration.</p>
+          </div>
+        </section>
+
+        <!-- CSS Syntax -->
+        <section>
+          <h3>Review: CSS Syntax</h3>
+          <div class="left-align">
+            <p>Declarations: Property and value of style you plan use on HTML element.</p>
+            <p>Declarations end with a semicolon</p>
+            <p>Declarations can be grouped and are surrounded by curly brackets.</p>
+          </div>
+<pre><code class="html">selector {
+  property: value;
+  property: value;
+  property: value;
+}</code></pre>
+        </section>
+
+        <!-- Selectors elements-->
+        <section>
+			  <h3>Review: Selector: Element</h3>
+          <pre><code class="html">p {
+  property: value;
+}</code></pre>
+      <p>Selects all paragraph elements.</p>
+      <pre><code class="html">img {
+  property: value;
+}</code></pre>
+        <p>Selects all image elements.</p>
+        </section>
+
+        <!-- Selectors ID-->
+        <section>
+			    <h3>Review: Selector: ID</h3>
+<pre><code class="html">#footer {
+  property: value;
+}</code></pre>
+          <p>Selects all elements with an id of "footer".</p>
+          <pre><code class="html">&lt;p id="footer">Copyright 2011&lt;/p></code></pre>
+          <p>The associated HTML.</p>
+			  </section>
+
+        <!-- Selectors Class-->
+        <section>
+			    <h3>Selector: Class</h3>
+<pre><code class="html">.warning {
+  color: red;
+}</code></pre>
+          <p>Selects all elements with a class of "warning".</p>
+
+          <pre><code class="html">&lt;p class="warning">Run away!&lt;/p></code></pre>
+          <p>The associated HTML.</p>
+			  </section>
+
+        <!-- Selector position-->
+        <section>
+        <h3>Review: Selector: Position</h3>
+<pre><code class="html">p em {
+  color: yellow;
+}
+</code></pre>
+       <p>Selects all em elements that are within a paragraph</p>
+<pre><code class = "html">
+&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
+</code></pre>
+        <p>The associated HTML.</p>
+      </section>
+
+      <!-- Standard practices-->
+      <section>
+        <h3>Standard Practices</h3>
+        <p>Awesome, right?</p>
+        <p> But how do people use this <span class = "green" style ="font-style:italic">REALLY?</span>
+        <ul>
+          <li class = "fragment">Reset CSS files</li>
+          <li class = "fragment">Standard widths and sizes</li>
+          <li class = "fragment">Wrappers</li>
+        </ul>
+      </section>
+
+      <!-- Reset CSS-->
+      <section>
+        <h3>Reset CSS</h3>
+        <p>Even though HTML is the structure and CSS is the design, some HTML elements have default styles</p>
+        <p class = "fragment">Examples include:</p>
+        <ul class = "fragment">
+          <li>Bulleted lists like this one have standard bullets</li>
+          <li>Paragraphs have default padding</li>
+          <li>Links are blue and underlined</li>
+        <ul>
+      </section>
+
+      <section>
+        <h3>Reset CSS</h3>
+        <div>
+          Most elements:
+<pre><code class = "html">
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+</code></pre>
+        </div>
+        <div>
+          Lists:
+<pre><code class = "html">
+  list-style: none;
+</code></pre>
+        </div>
+      </section>
+
+      <!-- Sizes-->
+      <section>
+        <h3>Standard widths and sizes</h3>
+        <p>Some sizes that are good to know about</p>
+        <ul>
+          <li>A standard font size is usually 12px</li>
+          <li>
+            Screens vary greatly in width!
+            Standardize your design a couple ways
+            <ul>
+              <li>Set the body width to a specific width</li>
+              <li>Set the content area width to 100%, with max-width of around 1200px/1400px and a min-width of around 960px.
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Sizes-->
+      <section>
+        <h3>Wrappers</h3>
+        <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
+<pre><code class = "html">
+  .wrapper{
+      width: 100%;
+      max-width:1400px;
+      margin: 0 auto;
+  }
+</code></pre>
+      </section>
+
+      <!-- Let's Develop It -->
+      <section>
+        <h3>Let's Develop It</h3>
+        <p class = "blue">Getting our feet wet</p>
+        <ul>
+          <li>Download practice files</li>
+          <li>Look through the page</li>
+          <li>Add a link to the reset.css file in the head of the document</li>
+          <li>Notice the changes to the layout</li>
+        </ul>
+      </section>
+
+      <!-- Links-->
+      <section>
+        <h3>Linking on pages</h3>
+<pre><code class = "html">
+&lt;a href = "#section">Go to Section!&lt;/a>
+</code></pre>
+<pre><code class = "html">
+&lt;a name= "section">&lt;/a>
+</code></pre>
+      <p><a href = "http://en.wikipedia.org/wiki/List_of_Crayola_crayon_colors" target = "_blank">Example on Wikipedia</a>
+      </section>
+
+      <!-- Pseudo selectors-->
+      <section>
+        <h3>Pseudo Selectors</h3>
+        <p>In addition to applying css to elements, classes and ids, you can apply css on certain events. Most notably, hover</p>
+<pre><code class = "html">
+.turn-blue:hover{
+  background-color: lightblue;
+  color: grey
+}
+</code></pre>
+<pre><code class = "html">
+&lt;div class = "turn-blue">I will only turn blue on hover&lt;/div>
+</code></pre>
+      <style>
+      .turn-blue:hover{
+        background-color: lightblue;
+        color: grey
+      }
+      </style>
+      <span class = "turn-blue">I will only turn blue on hover</span>
+      </section>
+
+      <!-- Fonts-->
+      <section>
+        <h3>@font-face</h3>
+        <p>The world of HTML has progressed beyond Times New Roman and Arial</p>
+        <p class = "green">Yay!</p>
+        <p>How do we use new and cool fonts?</p>
+      </section>
+
+      <!-- Fonts-->
+      <section>
+        <h3>@font-face</h3>
+        <p>Use font from outside sources (like Google Web Fonts)</p>
+        <p><a href = "http://www.google.com/webfonts" target = "_blank">http://www.google.com/webfonts</a></p>
+        <p>In our example, we use Audiowide, Quicksand and Lato</p>
+<pre><code class = "html">
+  &lt;link href="http://fonts.googleapis.com/css?family=Audiowide|Quicksand:300,400,700|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" rel="stylesheet" type="text/css">
+</code></pre>
+        <a href = "http://fonts.googleapis.com/css?family=Audiowide|Quicksand:300,400,700|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" target ="_blank">What does that do?</a>
+      </section>
+
+      <section>
+        <h3>@font-face</h3>
+        <p>Download fonts locally</p>
+        <p>In our example, we downloaded 'Entypo'</p>
+        <p>To use it, add the following to css:</p>
+<pre><code class = "html">
+  @font-face {
+    font-family: 'EntypoRegular';
+    src: url('font/Entypo-webfont.eot');
+    src: url('font/Entypo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/Entypo-webfont.woff') format('woff'),
+         url('font/Entypo-webfont.ttf') format('truetype'),
+         url('font/Entypo-webfont.svg#EntypoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+</code></pre>
+      </section>
+
+      <section>
+        <h3>@font-face</h3>
+        <p>Using the fonts</h3>
+<pre><code class = "html">
+body{
+  font-family: 'Lato', Arial, sans-serif;
+}
+</code></pre>
+      </section>
+
+      <!-- Let's Develop It-->
+      <section>
+        <h3>Let's Develop It</h3>
+        <p class = "blue">Use your new-found knowledge!</p>
+        <ul>
+          <li>Update the links in the header and footer to jump to the corresponding section</li>
+          <li>Update the links in the site to change color on hover. Try to update the background color too!</li>
+          <li>
+            Update the font of the site. The completed example uses:
+            <ul>
+              <li>Lato for the body</li>
+              <li>Audiowide for h1</li>
+              <li>Quicksand for h2</li>
+              <li>EntypoRegular for the bullets and jump up/down links</li>
+            </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <!-- Intro to HTML 5-->
+      <section>
+        <h3>HTML 5: What is it?</h3>
+        <p>Formally, HTML5 is the <a href = "http://www.w3.org/TR/html5/" target = "_blank">W3C’s specification</a> for the next version of HTML.</p>
+        <p>Informally, people use "HTML5" to refer to a whole set of new web standards and abilities:
+        <ul class >
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <!-- Specifications-->
+      <section>
+        <h2>HTML5 Specifications</h2>
+        <ul>
+          <li>2004 - started work</li>
+          <li class="fragment">2008 - first public working draft</li>
+          <li class="fragment">2011 - last call</li>
+          <li class="fragment">2012 - working draft</li>
+          <li class="fragment">2014 - planned for stable recommendation</li>
+        </ul>
+      </section>
+
+        <!-- Browser compatibility-->
+        <section>
+          <section>
+            <h2>What about the browsers?</h2>
+            <ul>
+              <li class="chrome">Chrome</li>
+              <li class="firefox">Firefox</li>
+              <li class="ie">Internet Explorer</li>
+              <li class="webkit">Safari</li>
+              <li class="opera">Opera</li>
+            </ul>
+          </section>
+          <section>
+            <h2>HTML5 &amp; CSS3 Readiness</h2>
+            <a href="http://html5readiness.com/" target="_blank">HTML5 &amp; CSS3 Readiness</a><br/>
+            <img src="images/screenshots/html5-css3-readiness.png" alt=""/>
+          </section>
+          <section>
+            <h2>Can I Use?</h2>
+            <a href="http://caniuse.com/" target="_blank">Can I Use?</a><br/>
+            <img src="images/screenshots/caniuse-border-radius.png" alt=""/>
+          </section>
+          <section>
+            <h2>HTML5 Please</h2>
+            <a href="http://html5please.com/" target="_blank">HTML5 Please</a><br/>
+            <img src="images/screenshots/html5-please.png" alt=""/>
+          </section>
+        </section>
+
+        <!-- Resources-->
+        <section>
+          <section>
+            <h2>Helpful Resources</h2>
+          </section>
+          <section>
+            <img src="images/W3C_Icon.svg" alt="">
+            <p>
+              <a href="http://dev.w3.org/html5/spec/single-page.html" target="_blank">W3C HTML5 specs</a>
+            </p>
+          </section>
+          <section>
+            <img src="images/html5rocks.png" alt=""/>
+            <p>
+              <a href="http://www.html5rocks.com" target="_blank">http://www.html5rocks.com</a>
+            </p>
+          </section>
+          <section>
+            <img src="images/Mozilla-Developer-Network.png" alt=""/>
+            <p>
+              <a href="https://developer.mozilla.org" target="_blank">https://developer.mozilla.org</a>
+            </p>
+          </section>
+          <section>
+            <img src="images/html5doctor.png" alt=""/>
+            <p>
+              <a href="http://html5doctor.com" target="_blank">http://html5doctor.com</a>
+            </p>
+          </section>
+        </section>
+
+        <!-- What does it mean?-->
+        <section>
+          <section>
+            <h3>So what's so cool about it?</h3>
+            <img src="images/html5.svg" style="height:75%" alt=""/>
+            <p>Too much to cover in our time together</p>
+            <p>But here are some highlights:</p>
+          </section>
+          <section>
+            <h2>Marks some old things obsolete</h2>
+            <h4>Examples</h4>
+            <ul>
+              <li>Deprecated items (e.g. frame, frameset, noframes)</li>
+              <li>Presentational elements and attributes replaced by CSS (e.g.
+               font, big, center)</li>
+            </ul>
+            <a href="http://dev.w3.org/html5/spec/single-page.html#obsolete">reference</a>
+          </section>
+          <section>
+            <h2>Redefines a few things</h2>
+            <p>Gives some old elements semantic meaning and separates them from presentation (e.g. b, i, strong, em)</p>
+          </section>
+          <section>
+            <h2>Adds a bunch of new features</h2>
+            <ul class="html5-features">
+              <li>
+                <span>semantics</span>
+                <img src="images/html5-logo/html5_semantics.svg" alt=""/>
+              </li>
+              <li>
+                <span>offline &amp; storage</span>
+                <img src="images/html5-logo/html5_offline_storage.svg" alt=""/>
+              </li>
+              <li>
+                <span>device access</span>
+                <img src="images/html5-logo/html5_device_access.svg" alt=""/>
+              </li>
+              <li>
+                <span>connectivity</span>
+                <img src="images/html5-logo/html5_connectivity.svg" alt=""/>
+              </li>
+              <li>
+                <span>multimedia</span>
+                <img src="images/html5-logo/html5_multimedia.svg" alt=""/>
+              </li>
+              <li>
+                <span>3D &amp; graphics</span>
+                <img src="images/html5-logo/html5_effects_3d.svg" alt=""/>
+              </li>
+              <li>
+                <span>performance</span>
+                <img src="images/html5-logo/html5_perfintegration.svg" alt=""/>
+              </li>
+              <li>
+                <span>presentation</span>
+                <img src="images/html5-logo/html5_css3_styling.svg" alt=""/>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- DOCTYPE -->
+        <section>
+          <section>
+            <h2>HTML5 Doctype</h2>
+            <pre><code class="xml">
+  &lt;!DOCTYPE html&gt;
+            </code></pre>
+            <p>
+              Minimum information required to ensure that a browser renders using
+              standards mode
+            </p>
+          </section>
+          <section>
+            <h2>Old Doctypes</h2>
+            <pre><code class="xml">
+  &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd"&gt;
+
+  &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+            </code></pre>
+          </section>
+        </section>
+
+        <!-- Semantics -->
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_semantics.svg" height="50" alt="">
+            Semantic HTML
+          </h2>
+          <blockquote cite="http://en.wikipedia.org/wiki/Semantic_HTML">The use of HTML markup to reinforce the semantics, or meaning, of the information in webpages rather than merely to define its presentation (look).</blockquote>
+          <a href="http://en.wikipedia.org/wiki/Semantic_HTML">-Wikipedia</a>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_semantics.svg" height="50" alt="">
+            Semantics
+          </h2>
+          <p>Give meaning to structure</p>
+        </section>
+        <section>
+          <h2>Not Semantic</h2>
+          <pre><code>&lt;div id="header"&gt;&lt;/div&gt;</code></pre>
+          <pre><code>&lt;div class="nav"&gt;&lt;/div&gt;</code></pre>
+          <pre><code>&lt;div id="footer"&gt;&lt;/div&gt;</code></pre>
+        </section>
+        <section>
+          <h2>Semantic</h2>
+          <pre><code>&lt;header&gt;&lt;/header&gt;</code></pre>
+          <pre><code>&lt;nav&gt;&lt;/nav&gt;</code></pre>
+          <pre><code>&lt;footer&gt;&lt;/footer&gt;</code></pre>
+        </section>
+
+        <!-- New Elements -->
+        <section>
+          <section>
+            <h2>New Structural Elements</h2>
+          </section>
+          <section>
+            <h2>&lt;section&gt;</h2>
+            <ul>
+              <li>Group together thematically related content</li>
+              <li>Similar to prior use of the div, but div has no semantic meaning</li>
+            </ul>
+          </section>
+          <section>
+            <h2>&lt;header&gt;</h2>
+            <ul>
+              <li>Container for a group of introductory or navigational aids</li>
+              <li>Document can have multiple header elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+          </section>
+          <section>
+            <h2>&lt;footer&gt;</h2>
+            <ul>
+              <li>Contains information about its containing element</li>
+              <li>E.g. who wrote it, copyright, links to related content, etc.</li>
+              <li>Document can have multiple footer elements</li>
+              <li>E.g. One for the page, one for each section</li>
+            </ul>
+          </section>
+          <section>
+            <h2>&lt;aside&gt;</h2>
+            <ul>
+              <li>Tangentially related content</li>
+              <li>E.g. sidebar, pull quotes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>&lt;nav&gt;</h2>
+            <ul>
+              <li>Contains major navigational information</li>
+              <li>Usually a list of links</li>
+              <li>Often lives in the header</li>
+              <li>E.g. site navigation</li>
+            </ul>
+          </section>
+          <section>
+            <h2>&lt;article&gt;</h2>
+            <ul>
+              <li>Self-contained related content</li>
+              <li>E.g. blog posts, news stories, comments, reviews, forum posts</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- HTML5 doctor -->
+        <section>
+          <p>
+            <a href="http://html5doctor.com" target="_blank"><img src="images/html5doctor.png" alt=""/></a>
+          </p>
+          <p>
+            <a href="http://html5doctor.com/element-index/" target="_blank">element index</a>
+          </p>
+          <p>
+            <a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf" target="_blank">
+              sectioning flowchart</a>
+          </p>
+        </section>
+
+        <!-- More semantics -->
+        <section>
+          <h2>Not Semantic</h2>
+<pre class="massive"><code style="font-size:85%;">&lt;body&gt;
+    &lt;div id="header"&gt;
+      &lt;h1&gt;Hi, I'm a header!&lt;/h1&gt;
+      &lt;div id="nav"&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="foo"&gt;foo&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="bar"&gt;bar&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="main"&gt;
+      &lt;div class="article"&gt;foo&lt;/div&gt;
+      &lt;div class="article"&gt;bar&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="footer"&gt;Hi, I'm a footer!&lt;/div&gt;
+  &lt;/body&gt;
+</code></pre>
+        </section>
+
+        <section>
+          <h2>A lot of Divs</h2>
+<pre class="massive"><code style="font-size:85%;">&lt;body&gt;
+  &lt;div id="header"&gt;
+    &lt;h1&gt;Hi, I'm a header!&lt;/h1&gt;
+    &lt;div id="nav"&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="foo"&gt;foo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="bar"&gt;bar&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="main"&gt;
+    &lt;div class="article"&gt;foo&lt;/div&gt;
+    &lt;div class="article"&gt;bar&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="footer"&gt;Hi, I'm a footer!&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+          <p>also known as div-itis</p>
+        </section>
+
+        <section>
+          <h2>Semantic</h2>
+          <pre class="massive"><code style="font-size:85%;">&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Hi, I'm a header!&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="http://www.foo.com"&gt;foo&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://www.bar.com"&gt;bar&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;section&gt;
+    &lt;article&gt;foo&lt;/article&gt;
+    &lt;article&gt;bar&lt;/article&gt;
+  &lt;/section&gt;
+  &lt;footer&gt;Hi, I'm a footer!&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+        </section>
+
+        <section>
+          <h2>Semantic Markup Enhances</h2>
+          <ul>
+            <li class="fragment">Accessibility</li>
+            <li class="fragment">Searchability</li>
+            <li class="fragment">Internationalization</li>
+            <li class="fragment">Interoperability</li>
+          </ul>
+          <p class="fragment">It also helps treat the plague of div-itis!</p>
+        </section>
+
+        <section>
+          <section>
+            <h2>What about old browsers?</h2>
+            <a href="http://caniuse.com/#feat=html5semantic" target="_blank">
+              <img src="images/screenshots/caniuse-semantics.png" alt=""/>
+            </a>
+          </section>
+
+          <section>
+            <h2>HTML5Shiv</h2>
+            <a href="http://code.google.com/p/html5shiv/">HTML5Shiv</a>
+            <p>HTML5 IE enabling script</p>
+            <pre><code>&lt;!--[if lt IE 9]&gt;
+&lt;script src="html5shiv.js"&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</code></pre>
+            <blockquote class="fragment">polyfill (n): a JavaScript shim that replicates the standard API for older browsers</blockquote>
+          </section>
+        </section>
+
+        <!-- Let's Develop It-->
+        <section>
+          <h2>Let's Develop It</h2>
+          <p class="blue">Modify the site to use semantic HTML</p>
+          <ul>
+            <li>Change one small thing at a time</li>
+            <li>Remember to modify the CSS to match the HTML</li>
+            <li>You have 10-15 minutes to get started</li>
+            <li>You won't be able to change everything - if we have time, you can continue at the end of the workshop</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+          <div style="font-size:1000%; height:100%; margin-top:20%" class="blue">?</div>
+        </section>
+
+			</div>
+  		<footer>
+        <div class="copyright">
+          Intermediate HTML/CSS ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

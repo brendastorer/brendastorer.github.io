@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Class 4 ~ Intermediate HTML/CSS ~ Girl Develop IT</title>
+
+    <meta name="description" content="This is the official Girl Develop It Intermediate Core HTML/CSS curriculum. It was developed through the contributions of Julie Pagano, Jen Myers, Alexis Goldstein and Izzy Johnston.
+
+    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.css">
+    <link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+    <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+
+    <!-- For the slides -->
+    <link rel="stylesheet" href="css/slides.css">
+
+
+    <!-- If use the PDF print sheet so students can print slides-->
+    <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+      <!-- Opening slide -->
+      <section>
+        <img src="images/gdi_logo_badge.png" alt="" height="400" width="400"/>
+        <h3>Intermediate HTML &amp; CSS</h3>
+        <h4>Class 4</h4>
+        <a href="http://bit.ly/1G6KiZ7">http://bit.ly/1G6KiZ7</a>
+      </section>
+
+      <!-- Welcome-->
+      <section>
+        <h3>Welcome!</h3>
+        <div class="left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Transitions-->
+      <section>
+        <section>
+          <h2>Transitions</h2>
+          <p>Allow property changes in CSS values to occur smoothly over a specified duration</p>
+          <p class="fragment">Create some awesome effects without any JavaScript</p>
+        </section>
+        <section>
+          <h2>Transition Triggers</h2>
+          <ul>
+            <li>Hover</li>
+            <li>Mouse click</li>
+            <li>Focus state</li>
+            <li>Active state</li>
+            <li>Changes to the element</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Transition Properties</h2>
+          <ul>
+            <li>transition-property</li>
+            <li>transition-duration</li>
+            <li>transition-delay</li>
+            <li>transition-timing-function</li>
+          </ul>
+        </section>
+        <section>
+          <h2>transition-property</h2>
+          <p>the names of CSS properties that should be transitioned</p>
+          <pre><code>
+.example1 { transition-property: background-color; }
+          </code></pre>
+          <p>set to <strong>all</strong> to transition all CSS properties</p>
+          <pre><code>
+.example2 { transition-property: all; }
+          </code></pre>
+        </section>
+        <section>
+          <h2>transition-property</h2>
+          <p>
+            <a href="http://leaverou.github.com/animatable/" target="_blank">animatable examples</a>
+          </p>
+          <p>
+            <a href="http://www.w3.org/TR/css3-transitions/#animatable-css" target="_blank">full list of supported properties</a>
+          </p>
+        </section>
+        <section class="transition-duration">
+          <h2>transition-duration</h2>
+          <p>the number of seconds or milliseconds a transition animation should take to complete</p>
+          <pre><code>
+.example1 { transition-duration: 2s; }
+          </code></pre>
+          <div class="sliders" style="width:40%;">
+            <p>
+              <span class="value">2</span>s duration
+              <input type="range" min="0" max="10" value="3">
+            </p>
+          </div>
+          <div class="example">
+          </div>
+        </section>
+        <section class="transition-delay">
+          <h2>transition-delay</h2>
+          <p>delay transitions from the moment a trigger happens</p>
+          <pre><code>.example1 { transition-delay: 0s; }
+.example2 { transition-delay: 1s; }
+.example3 { transition-delay: 2s; }
+.example4 { transition-delay: 3s; }</code></pre>
+          <article>
+            <div class="example4">3</div>
+            <div class="example3">2</div>
+            <div class="example2">1</div>
+            <div class="example1">0</div>
+          </article>
+        </section>
+        <section class="transition-timing-function">
+          <h2>transition-timing-function</h2>
+          <p>determines how intermediate values are calculated</p>
+          <pre><code>.example { transition-timing-function: ease; }</code></pre>
+          <article>
+            <div class="ease">ease</div>
+            <div class="linear">linear</div>
+            <div class="ease-in">ease-in</div>
+            <div class="ease-out">ease-out</div>
+            <div class="ease-in-out">ease-in-out</div>
+            <div class="cubic-bezier">cubic-bezier</div>
+          </article>
+          <a href="http://cubic-bezier.com/" target="_blank">cubic-bezier</a>
+        </section>
+        <section>
+          <h2>Resources</h2>
+          <a href="https://css-tricks.com/almanac/properties/t/transition/" target="_blank">CSS Tricks &mdash; Transition Almanac</a>
+          <a href="http://www.css3maker.com/css3-transition.html" target="_blank">CSS3 Maker &mdash; Transitions</a>
+          <a href="http://caniuse.com/#search=transitions" target="_blank">Can I Use? &mdash; Transitions</a>
+        </section>
+        <section>
+          <h2>Let's make our mobile menu smooth!</h2>
+          <ul>
+            <li>Use transition to bring the menu in from the top of the page.</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Transformations-->
+      <section>
+        <section>
+          <h2>Transforms</h2>
+          <p>Allow elements rendered by CSS to be transformed in space.</p>
+        </section>
+        <section>
+          <h2>Transform: Scale</h2>
+          <p>scales the element</p>
+          <p>transform:  scale(sx[, sy]);</p>
+          <article class="transform-scale">
+            <div class="example1">
+              scale(2);
+            </div>
+
+            <div class="example2">
+              scale(0.5);
+            </div>
+
+            <div class="example4">
+              scale(1, 0.5);
+            </div>
+
+            <div class="example3">
+              scale(0.5, 1);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform: Rotate</h2>
+          <p>rotates the element degrees around its origin</p>
+          <p>transform: rotate(angle);</p>
+          <article class="transform-rotate">
+            <div class="example1">
+              rotate(45deg);
+            </div>
+
+            <div class="example2">
+              rotate(-45deg);
+            </div>
+
+            <div class="example3">
+              rotate(-90deg);
+            </div>
+
+            <div class="example4">
+              rotate(180deg);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform: Translate</h2>
+          <p>move element using x and y coordinates</p>
+          <p>transform: translate(ax[, ay]);</p>
+          <article class="transform-translate">
+            <div class="example1">
+              translate(20px);
+            </div>
+
+            <div class="example2">
+              translate(0, 20px);
+            </div>
+
+            <div class="example3">
+              translate(-20px, 20px);
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Transform-origin</h2>
+          <p>the x and y origin for transformation</p>
+          <p>transform-origin: x-offset y-offset;</p>
+          <article class="transform-origin">
+            <div class="example1">
+              transform-origin(top, left)
+            </div>
+
+            <div class="example2">
+              transform-origin(50%, 50%)
+            </div>
+
+            <div class="example3">
+              transform-origin(0, 50px)
+            </div>
+          </article>
+        </section>
+        <section>
+          <h2>Resources</h2>
+          <a href="https://css-tricks.com/almanac/properties/t/transform/" target="_blank">CSS Tricks &mdash; Transform Almanac</a>
+          <a href="http://desandro.github.com/3dtransforms/" target="_blank">3D Transforms examples with a breakdown</a>
+          <a href="http://www.css3maker.com/css3-transform.html" target="_blank">CSS3 Maker &mdash; Transform</a>
+          <a href="http://caniuse.com/#search=transforms" target="_blank">Can I Use? &mdash; Transforms</a>
+        </section>
+      </section>
+
+      <!-- Animations-->
+      <section>
+        <section>
+          <h2>Intro to Animations</h2>
+          <p>Animate transitions from one CSS style configuration to another</p>
+        </section>
+        <section>
+          <h2>Benefits of CSS3 Animations</h2>
+          <h4>Over JavaScript Animations</h4>
+          <ul>
+            <li>Easy for simple animations (no JavaScript required)</li>
+            <li>Better Browser Performance</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Animations</h2>
+          <h4>Two Components</h4>
+          <ol>
+            <li>Style describing the CSS animation</li>
+            <li>A set of keyframes that indicate the start and end states of the animation's style</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Animations</h2>
+          <pre><code>@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}</code></pre>
+        </section>
+        <section>
+          <h2>Animate properties</h2>
+          <ul>
+            <li>animation-name (name you choose)</li>
+            <li>animation-duration (s or ms)</li>
+            <li>animation-iteration-count (X or infinite)</li>
+            <li><a href="http://www.w3schools.com/cssref/css3_pr_animation-direction.asp" target="_blank">animation-direction</a></li>
+            <li><a href="http://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp" target="_blank">animation-timing-function</a></li>
+            <li><a href="http://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp" target="_blank">animation-fill-mode</a></li>
+            <li>animation-delay (s or ms)</li>
+          </ul>
+          <pre><code>/* Shorthand */
+.element-to-animate {
+  animation: NAME-YOUR-ANIMATION 5s infinite;
+}</code></pre>
+        </section>
+        <section>
+          <h2>What about browser support for animations?</h2>
+          <a href="http://caniuse.com/#search=css3%20animation" target="_blank">Can I Use?</a>
+        </section>
+        <section>
+          <h2>Resources</h2>
+          <a href="https://css-tricks.com/almanac/properties/a/animation/" target="_blank">CSS Tricks &mdash; Animations Almanac</a><br>
+          <a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/" target="_blank">CSS Tricks &mdash; Animations Keyframes syntax</a><br>
+          <a href="http://daneden.github.io/animate.css/" target="_blank">Animate.css</a><br>
+        </section>
+      </section>
+      <section>
+        <h2>Let's play!</h2>
+        <ul>
+          <li>Add a subtle transition to all links on the page.</li>
+          <li>Use the transform scale property on the women's images when a mouse hovers over them so that they increase in size.</li>
+          <li>Add an animation to the Women in Computing Title. Let's make it animate in from the left.</li>
+        </ul>
+      </section>
+
+      <section>
+        <section>
+          <h2>HTML5 Features</h2>
+        </section>
+      </section>
+
+      <!-- What is Microdata-->
+      <section>
+        <section>
+          <h2>Microdata</h2>
+        </section>
+        <section>
+          <h2>Microdata</h2>
+          <p class="yellow">Micro-what?</p>
+          <p class="fragment">From the W3C spec:</p>
+          <blockquote class="fragment">Sometimes, it is desirable to annotate content with specific machine-readable labels...</blockquote>
+          <blockquote class="fragment">Microdata allows nested groups of namevalue pairs to be added to documents, in parallel with the existing content.</blockquote>
+          <a href="http://www.w3.org/TR/microdata/#overview" target="_blank">Microdata Overview</a>
+        </section>
+        <section>
+          <h2>Microdata</h2>
+          <p class="yellow">Sounds <strong>BORING</strong></p>
+          <p>Why should I care?</p>
+          <img src="images/bored-cat.jpg" alt=""/>
+        </section>
+        <section>
+          <h2>Microdata</h2>
+          <p>Wouldn't it be great if the search results for your restaurant looked like this?</p>
+          <img src="images/place-microdata.png" alt=""/>
+        </section>
+        <section>
+          <h2>Microdata</h2>
+          <p>Or if search results for your book looked like this?</p>
+          <img src="images/person-microdata.png" alt=""/>
+        </section>
+        <section>
+          <h2>Microdata</h2>
+          <p>Or if search results for your recipe looked like this?</p>
+          <img src="images/recipe-microdata.png" alt=""/>
+        </section>
+      </section>
+
+      <!-- Rich Snippets-->
+      <section>
+        <section>
+          <h2>Rich Snippets</h2>
+          <blockquote class="fragment">The more information a search result snippet can provide, the easier it is for users to decide whether that page is relevant to their search.</blockquote>
+          <a href="http://support.google.com/webmasters/bin/answer.py?hl%3Den%26answer%3D99170" target="_blank">Rich snippets</a>
+        </section>
+        <section>
+          <h2>Rich Snippets</h2>
+          <blockquote class="fragment">With rich snippets, webmasters with sites <strong>containing structured</strong> content...can label their content to make it clear that each labeled piece of text represents a certain type of data: for example, a restaurant name, an address, or a rating.</blockquote>
+          <a href="http://support.google.com/webmasters/bin/answer.py?hl%3Den%26answer%3D99170" target="_blank">Rich snippets</a>
+        </section>
+      </section>
+
+      <!-- Structure attributes-->
+      <section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p>We will add microdata to our favorite pizza restaurant</p>
+          <pre><code contenteditable>
+&lt;div>
+  L'Amourita Pizza
+  Located at 123 Main St, Albuquerque, NM.
+  Phone: 206-555-1234
+  &lt;a href="http://pizza.com">http://pizza.com&lt;/a>
+&lt;/div>
+          </code></pre>
+        </section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p>We need to define three things to add microdata to our sites:</p>
+          <ul>
+            <li class="fragment">Itemscope attribute</li>
+            <li class="fragment">Itemtype attribute</li>
+            <li class="fragment">Itemprop attribute</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Item scope-->
+      <section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemscope</p>
+          <pre><code contenteditable>
+&lt;div itemscope>
+  L'Amourita Pizza
+  Located at 123 Main St, Albuquerque, NM.
+  Phone: 206-555-1234
+  &lt;a href="http://pizza.com">http://pizza.com&lt;/a>
+&lt;/div>
+          </code></pre>
+        </section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Item scope</p>
+          <p>Sets the "scope" of what we are describing with the microdata.</p>
+          <p>All elements nested inside the div with "itemscope" will adhere to the vocabulary we specify with "itemtype". (i.e. person, place, recipe)</p>
+        </section>
+      </section>
+
+      <!-- Item type-->
+      <section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemtype</p>
+          <pre><code contenteditable>
+&lt;div itemscope itemtype="http://schema.org/Organization">
+  L'Amourita Pizza
+  Located at 123 Main St, Albuquerque, NM.
+  Phone: 206-555-1234
+  &lt;a href="http://pizza.com">http://pizza.com&lt;/a>
+&lt;/div>
+          </code></pre>
+        </section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemtype</p>
+          <p>Points you to the place where a microdata type is defined</p>
+          <p>Since we're defining a business, we want to point to the definition of an <strong>Organization</strong></p>
+          <p><a href="http://schema.org" target="_blank">http://schema.org</a> defines several type including <a href="http://data-vocabulary.org/Organization" target="_blank">Organization</a></p>
+        </section>
+      </section>
+
+      <!-- Item properties-->
+      <section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemprop</p>
+          <pre><code contenteditable>
+&lt;div itemscope itemtype="http://schema.org/Organization">
+   &lt;span itemprop="name">L'Amourita Pizza&lt;/span>
+   Located at 123 Main St, Albuquerque, NM.
+   Phone: &lt;span itemprop="tel">206-555-1234&lt;/span>
+   &lt;a href="http://pizza.com" itemprop="url">http://pizza.com&lt;/a>
+&lt;/div>
+          </code></pre>
+        </section>
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemprop</p>
+          <p>Itemprop is a property of your Item's type. The available properties are listed on the relevant page at <a href="http://schema.org/docs/schemas.html" target="_blank">http://schema.org/docs/schemas</a></p>
+          <p>For our <strong>Organization</strong> example, the available include are: name, url, address, telephone, and location. For the full list: <a href="http://schema.org/Organization" target="_blank">http://schema.org/Organization</a></p>
+        </section>
+
+        <section>
+          <h2>Microdata Structure</h2>
+          <p class="yellow">Itemprop</p>
+          <p>Itemprop is a property of your Item's type. The available properties are listed on the relevant page at <a href="http://schema.org/docs/schemas.html" target="_blank">http://schema.org/docs/schemas</a></p>
+          <p>Here are properties of a <a href="http://schema.org/Recipe" target="_blank">Recipe</a></p>
+          <img src="images/recipe-itemprop.png" alt=""/>
+        </section>
+      </section>
+
+       <!-- Nested Microdata-->
+       <section>
+          <section>
+            <h2>Nested Microdata</h2>
+            <p>We have specified ALMOST everything for our <strong>Organization</strong>, but we still don't have entries for the address</p>
+            <pre><code contenteditable>
+  &lt;div itemscope itemtype="http://schema.org/Organization">
+     &lt;span itemprop="name">L'Amourita Pizza&lt;/span>
+     Located at 123 Main St, Albuquerque, NM.
+     Phone: &lt;span itemprop="tel">206-555-1234&lt;/span>
+     &lt;a href="http://pizza.com" itemprop="url">http://pizza.com&lt;/a>
+  &lt;/div>
+            </code></pre>
+            <p class ="fragment">Addresses are their own unique <strong>itemtype</strong>. So we need to <em>nest</em> the address information inside a new element with the <strong>itemtype</strong> set to Address</p>
+          </section>
+          <section>
+            <h2>Nested Microdata</h2>
+            <pre><code contenteditable>
+  &lt;div itemscope itemtype="http://schema.org/Organization">
+     &lt;span itemprop="name">L'Amourita Pizza&lt;/span>
+     Located at
+      &lt;span itemprop="address" itemscope itemtype ="http://schema.org/PostalAddress">
+        &lt;span itemprop="streetAddress">123 Main St&lt;/span>,
+        &lt;span itemprop="addressLocality">Albuquerque&lt;/span>,
+        &lt;span itemprop="addressRegion">NM&lt;/span>.
+      &lt;/span>
+     Phone: &lt;span itemprop="tel">206-555-1234&lt;/span>
+     &lt;a href="http://pizza.com" itemprop="url">http://pizza.com&lt;/a>
+  &lt;/div>
+            </code></pre>
+         </section>
+       </section>
+
+      <!-- Microdata Resources-->
+      <section>
+        <h2>Microdata Resources</h2>
+        <ul>
+          <li>To make sure google sees your page the  way you expect (in terms of the microdata), use this tool: <a href="http://www.google.com/webmasters/tools/richsnippets" target="_blank">http://www.google.com/webmasters/tools/richsnippets</a></li>
+          <li>Getting started guide: <a href="http://schema.org/docs/" target="_blank">http://schema.org/docs/gs.html></a></li>
+          <li>Tutorial on microdata from Mark Pilgrim: <a href="http://diveintohtml5.info/extensibility.html" target="_blank">http://diveintohtml5.info/extensibility.html</a></li>
+          <li>Google overview of using Microdata for an Organization: <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=146861" target="_blank">http://www.google.com/support/webmasters/bin/answer.py?answer=146861</a></li>
+        </ul>
+      </section>
+
+      <!-- Let's Develop It-->
+      <section>
+       <section>
+          <h2>Let's Develop It</h2>
+          <p>Enhance our
+            Women in Computing web site to use HTML5 &amp; CSS3</p>
+        </section>
+        <section>
+          <p>Use the <a href="http://schema.org/Person" target="_blank">Person</a> schema to describe the women in tech. Feel free to add more info than we have to use more itemprops!</p>
+        </section>
+      </section>
+
+      <!-- Multimedia-->
+      <section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+            Multimedia
+          </h2>
+          <p>Audio and video are first class citizens in HTML5</p>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+            Multimedia
+          </h2>
+          <p>Useful as a replacement for flash on mobile devices</p>
+          <p>Flash makes mobile devices sad :(</p>
+        </section>
+      </section>
+
+      <!-- Video -->
+      <section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+            Video
+          </h2>
+          <p class="yellow">The Dream</p>
+          <p>The video element was created to make it unnecessary to use plugins to display video content on your pages.</p>
+          <p>The idea is to simplify and streamline video content delivery.</p>
+          <pre><code>
+&lt;video src="demo.mp4" type="video/mp4">
+  Your browser does not support the video element.
+&lt;/video>
+          </code></pre>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+            Video
+          </h2>
+          <p class="yellow">The Reality</p>
+          <p>If you want to support ALL browsers and ALL video encodings, you will still need a plugin as a last-resort fall back plan.</p>
+          <p>This is because not all browsers read video the same way, and older browsers (like IE&lt;9) don't support the video element at all.</p>
+        </section>
+
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+            Video
+          </h2>
+          <p class="yellow">The Reality</p>
+          <pre class="massive"><code contenteditable>&lt;video id="movie" width="320" height="240" preload controls>
+  &lt;source src="pr6.webm" type='video/webm; codecs="vp8, vorbis"' />
+  &lt;source src="pr6.ogv" type='video/ogg; codecs="theora, vorbis"' />
+  &lt;source src="pr6.mp4" />
+  &lt;object width="320" height="240" type="application/x-shockwave-flash" data="flowplayer-3.2.1.swf">
+    &lt;param name="movie" value="flowplayer-3.2.1.swf" />
+    &lt;param name="allowfullscreen" value="true" />
+    &lt;param name="flashvars" value='config={"clip": {"url": "http://wearehugh.com/dih5/pr6.mp4", "autoPlay":false, "autoBuffering":true}}' />
+    &lt;p>Download video as &lt;a href="pr6.mp4">MP4&lt;/a>, &lt;a href="pr6.webm">WebM&lt;/a>, or &lt;a href="pr6.ogv">Ogg&lt;/a>.&lt;/p>
+  &lt;/object>
+&lt;/video>
+&lt;script>
+  var v = document.getElementById("movie");
+  v.onclick = function() {
+    if (v.paused) {
+      v.play();
+    } else {
+      v.pause();
+    }
+  });
+&lt;/script></code></pre>
+        </section>
+      </section>
+
+      <!-- Audio-->
+      <section>
+        <h2>
+          <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+          Audio
+        </h2>
+        <pre><code contenteditable>
+&lt;audio controls>
+&lt;source src="music.mp3" type="audio/mpeg"/>
+&lt;source src="music.aac" type="audio/mp4" />
+&lt;source src="music.ogg" type="audio/ogg"/>
+&lt;!-- now include flash fall back -->
+&lt;/audio>
+        </code></pre>
+      </section>
+
+      <!-- Multimedia Resources-->
+      <section>
+        <h2>
+          <img src="images/html5-logo/html5_multimedia.svg" height="50" alt=""/>
+          Multimedia
+        </h2>
+        <p>If the dream is still far from reality, what's a dev to do?</p>
+        <p>The good news is, devs are working on it all the time</p>
+        <p><a href="http://diveintohtml5.info/video.html#" target="_blank">Video on the Web</a></p>
+        <p><a href="http://www.mirovideoconverter.com/" target="_blank">Miro Video Converter</a></p>
+        <p><a href="http://html5doctor.com/native-audio-in-the-browser/" target="_blank">Native Audio in the Browser</a></p>
+      </section>
+
+      <!-- Canvas-->
+      <section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_effects_3d.svg" height="50" alt=""/>
+            Canvas
+          </h2>
+          <ul>
+            <li>Environment for creating dynamic images</li>
+            <li>Canvas element + javascript = dynamic content!</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_effects_3d.svg" height="50" alt=""/>
+            Canvas
+          </h2>
+          <ul>
+            <li>
+              <a href="http://www.datapointed.net/visualizations/math/factorization/animated-diagrams/#" target="_blank">Animated Factorization</a>
+            </li>
+            <li>
+              <a href="http://bomomo.com/" target="_blank">http://bomomo.com/</a>
+            </li>
+            <li>
+              <a href="http://canvasrider.com/" target="_blank">http://canvasrider.com/</a>
+            </li>
+            <li>
+              <a href="http://lights.elliegoulding.com/" target="_blank">http://lights.elliegoulding.com/</a>
+            </li>
+			<li>
+				<a href="http://codepen.io/jackrugile/pen/DGenc" target="_blank">Codepen.io</a>
+			</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_effects_3d.svg" height="50" alt=""/>
+            Canvas
+          </h2>
+          <p>The first step is to add a canvas element to your HTML. Make sure you give it an id:</p>
+          <pre><code contenteditable>
+&lt;canvas id="myCanvas" width="400" height="400">
+  Your browser doesn’t support Canvas.
+&lt;/canvas>
+          </code></pre>
+          <p class="fragment">Unfortunately, everything else (all the cool stuff) is actually in JavaScript and outside the scope of this class</p>
+        </section>
+      </section>
+
+      <!-- Geo location-->
+      <section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_device_access.svg" height="50" alt=""/>
+            Device Access
+          </h2>
+          <p>Rich, device-aware features and experiences</p>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_device_access.svg" height="50" alt=""/>
+            Geolocation
+          </h2>
+          <a href="https://maps.google.com/" target="_blank">Google Map</a>
+          <p>Browsers using HTML5 can locate you through IP addresses, WiFi connections, and GPS towers (for mobile phones and tablets)</p>
+          <p>But all the cool interactive stuff is, once again, done in JavaScript</p>
+          <p class="fragment yellow">You didn't expect HTML and CSS to do EVERYTHING, did you?</p>
+        </section>
+      </section>
+
+      <!-- Storage-->
+      <section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_offline_storage.svg" height="50" alt=""/>
+            Storage
+          </h2>
+          <p><a href="http://html5demos.com/storage" target="_blank">storage</a></p>
+          <p><a href="http://html5demos.com/storage-events" target="_blank">storage-events</a></p>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_offline_storage.svg" height="50" alt=""/>
+            Storage
+          </h2>
+          <ul>
+            <li class="fragment">You can use HTML5 Web Storage to persist simple data.</li>
+            <li class="fragment">
+              Two kinds of HTML5 Web Storage:
+              <ul>
+                <li>SessionStorage for per-window data</li>
+                <li>LocalStorage for global, persistent data (stored to hard drive through the browser)</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_offline_storage.svg" height="50" alt=""/>
+            SessionStorage
+          </h2>
+          <ul>
+            <li class="fragment">Ever accidentally bought two of the same kind of ticket, because you were shopping the same site in multiple windows/tabs?</li>
+            <li class="fragment">Session Storage provides a good way to prevent this.</li>
+            <li class="fragment">Session Storage is not saved to the user’s hard drive</li>
+            <li class="fragment">It only lasts for the time that a browser window or tab is open and viewing a specific site.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>
+            <img src="images/html5-logo/html5_offline_storage.svg" height="50" alt=""/>
+            LocalStorage
+          </h2>
+          <ul>
+            <li class="fragment">With Local Storage, we can save data to the user’s computer, via the browser.</li>
+            <li class="fragment">When a user revisits a site in the same browser they first visited in, any data saved to Local Storage can be retrieved.</li>
+            <li class="fragment">Local Storage is browser-specific: Information you save while browsing with Firefox will NOT be available to Safari.</li>
+          </ul>
+        </section>
+      </section>
+
+      <!-- Questions? -->
+      <section>
+        <h2>Questions?</h2>
+        <div style="font-size:1000%; height:100%; margin-top:20%" class="blue">?
+        </div>
+      </section>
+    </div>
+      <footer>
+        <div class="copyright">
+          Intermediate HTML/CSS ~ Girl Develop It ~
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+    </div>
+
+
+  <script src="reveal/lib/js/head.min.js"></script>
+  <script src="reveal/js/reveal.min.js"></script>
+  <script src="js/jquery-1.8.2.min.js"></script>
+  <script src="js/slides.js"></script>
+
+    <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+      { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+      });
+
+    </script>
+
+  </body>
+</html>
