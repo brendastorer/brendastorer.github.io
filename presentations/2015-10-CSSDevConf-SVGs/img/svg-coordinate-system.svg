@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 435.1 229.5">
+	<polyline fill="none" stroke="#22313F" stroke-width="9" stroke-miterlimit="10" points="416.5,19.8 21.6,19.8 21.6,209.5 "/>
+	<g>
+		<g>
+			<line fill="none" stroke="#969696" stroke-width="3" stroke-miterlimit="10" x1="21.6" y1="209.5" x2="27.6" y2="209.5"/>
+
+				<line fill="none" stroke="#969696" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="12.3507,12.3507" x1="40" y1="209.5" x2="404.3" y2="209.5"/>
+			<polyline fill="none" stroke="#969696" stroke-width="3" stroke-miterlimit="10" points="410.5,209.5 416.5,209.5 416.5,203.5
+				"/>
+
+				<line fill="none" stroke="#969696" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="11.8496,11.8496" x1="416.5" y1="191.7" x2="416.5" y2="31.7"/>
+			<line fill="none" stroke="#969696" stroke-width="3" stroke-miterlimit="10" x1="416.5" y1="25.8" x2="416.5" y2="19.8"/>
+		</g>
+	</g>
+	<text transform="matrix(1 0 0 1 43.4234 57.6775)" font-family="'Inconsolata'" font-size="30">0, 0</text>
+	<text transform="matrix(1 0 0 1 43.4236 192.0878)" font-family="'Inconsolata'" font-size="30">0, 110</text>
+	<text transform="matrix(1 0 0 1 310.5519 57.6776)" font-family="'Inconsolata'" font-size="30">209, 0</text>
+	<text transform="matrix(1 0 0 1 280.5519 192.0878)" font-family="'Inconsolata'" font-size="30">209, 110</text>
+	<circle fill="#F64747" cx="21.8" cy="19.5" r="6.3"/>
+	<circle fill="#F64747" cx="416.8" cy="19.5" r="6.3"/>
+	<circle fill="#F64747" cx="416.8" cy="209" r="6.3"/>
+	<circle fill="#F64747" cx="21.8" cy="209" r="6.3"/>
+</svg>

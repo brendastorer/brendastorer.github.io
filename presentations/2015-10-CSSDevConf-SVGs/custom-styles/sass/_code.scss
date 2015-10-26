@@ -1,0 +1,57 @@
+select {
+  color: $body-copy;
+}
+
+code, pre, style, textarea, input {
+  background: $soft-white;
+  color: lighten($body-copy, 35%);
+  font-family: 'inconsolatamedium', Consolas, 'Andale Mono', 'Courier New', monospace;
+  font-size: 1.7rem;
+}
+
+code {
+  padding: .2em .2em .1em;
+  white-space: nowrap;
+  border-radius: .2em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+pre, style, textarea {
+  padding: .5em .7em;
+  margin-left: -.1em;
+  margin-bottom: 1em;
+
+  code {
+    background: 0;
+    border: 0;
+    padding: 0;
+    white-space: pre-wrap;
+  }
+}
+
+textarea {
+  width: 100%;
+}
+
+/* HTML Syntax highlighting */
+
+.comment {
+  color: darken($soft-gray, 30);
+  font-style: italic;
+}
+
+.tag, .punctuation, .selector {
+  color: $body-copy;
+}
+
+.attr-value, .url {
+  color: $red;
+}
+
+.attr-name, .property {
+  color: $blue;
+}
+
+.entity {
+  color: $teal;
+}
