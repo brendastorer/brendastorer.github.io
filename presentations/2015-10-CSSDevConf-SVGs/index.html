@@ -28,15 +28,6 @@
     </header>
 
     <section class="slide">
-      <h2>How Voting Works</h2>
-      <ul class="delayed">
-        <li>Voting is allowed for an hour after each talk ends</li>
-        <li>504-229-6828</li>
-        <li>#CrackSVG (1-5) (comment)</li>
-      </ul>
-    </section>
-
-    <section class="slide">
     	<h2>Me</h2>
     	<ul>
     		<li class="delayed">Brenda Storer</li>
@@ -208,6 +199,9 @@
       <h2>SVG Coordinate System</h2>
       <pre><code lang="html">&lt;svg viewBox="0 0 209 110"&gt;&lt;/svg&gt;</code></pre>
       <p class="delayed">
+        Start with 0, 0 for less complexity
+      </p>
+      <p class="delayed">
         start x&nbsp;&nbsp;start y&nbsp;&nbsp;end x&nbsp;&nbsp;end y
       </p>
       <div class="delayed svg-coordinates">
@@ -258,12 +252,12 @@
 
     <section class="slide">
       <h2>Rectangle</h2>
-      <pre><code lang="html">&lt;svg viewBox="-1 -1 202 102"&gt;
-  &lt;rect width="200" height="100" rx="5" ry="5" fill="turquoise" stroke="#333333"&gt;
-&lt;/svg&gt;</code></pre>
+      <pre><code lang="html">&lt;svg viewBox="0 0 202 102">
+  &lt;rect width="200" height="100" rx="10" x="1" y="1" fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
 
-      <svg viewBox="-1 -1 202 102" class="svg-example">
-        <rect height="100" width="200" rx="5" ry="5" fill="turquoise" stroke="#333333"/>
+      <svg viewBox="0 0 202 102" class="svg-example">
+        <rect width="200" height="100" rx="10" x="1" y="1" fill="turquoise" stroke="#333333">
       </svg>
     </section>
 
@@ -280,12 +274,12 @@
 
     <section class="slide">
       <h2>Ellipse</h2>
-      <pre><code lang="html">&lt;svg viewBox="0 25 102 52"&gt;
-  &lt;ellipse cx="51" cy="51" rx="50" ry="25" fill="turquoise" stroke="#333333"&gt;
-&lt;/svg&gt;</code></pre>
+      <pre><code lang="html">&lt;svg viewBox="0 0 102 52" class="svg-example">
+  &lt;ellipse cx="51" cy="26" rx="50" ry="25" fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
 
-      <svg viewBox="0 25 102 52" class="svg-example">
-        <ellipse cx="51" cy="51" rx="50" ry="25" fill="turquoise" stroke="#333333"/>
+      <svg viewBox="0 0 102 52" class="svg-example">
+        <ellipse cx="51" cy="26" rx="50" ry="25" fill="turquoise" stroke="#333333">
       </svg>
     </section>
 
@@ -302,50 +296,50 @@
 
     <section class="slide">
       <h2>Polyline</h2>
-      <pre><code lang="html">&lt;svg viewBox="-1 -1 52 52"&gt;
-  &lt;polyline points="0,0 50,0 50,50" fill="turquoise" stroke="#333333"&gt;
-&lt;/svg&gt;</code></pre>
+      <pre><code lang="html">&lt;svg viewBox="0 0 52 52">
+  &lt;polyline points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
 
-      <svg viewBox="-1 -1 52 52" class="svg-example" style="width: 30%;">
-        <polyline points="1,1 50,1 50,50" fill="turquoise" stroke="#333333"/>
+      <svg viewBox="0 0 52 52" class="svg-example">
+        <polyline points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
       </svg>
     </section>
 
     <section class="slide">
       <h2>Polygon</h2>
-      <pre><code lang="html">&lt;svg viewBox="-1 -1 52 52"&gt;
-  &lt;polygon points="0,0 50,0 50,50" fill="turquoise" stroke="#333333"&gt;
-&lt;/svg&gt;</code></pre>
+      <pre><code lang="html">&lt;svg viewBox="0 0 52 52">
+  &lt;polygon points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
 
-      <svg viewBox="-1 -1 52 52" class="svg-example" style="width: 30%;">
-        <polygon points="1,1 50,1 50,50" fill="turquoise" stroke="#333333"/>
+      <svg viewBox="0 0 52 52" class="svg-example">
+        <polygon points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
       </svg>
     </section>
 
     <section class="slide">
       <h2>The Virtual Pen</h2>
-      <svg viewBox="0 -2 139 243" class="svg-example">
+      <svg viewBox="0 0 111 111" class="svg-example">
         <path d="M50,50
           L100,100
           M110,110
-          L100,0
+          L100,1
           A30,50 0 1,0 100,100
           Z"
-    fill="none" stroke="#333333"/>
+        fill="none" stroke="#333333">
       </svg>
     </section>
 
     <section class="slide">
       <h2>Path</h2>
-      <pre><code lang="html">&lt;svg viewBox="0 -2 139 243"&gt;
+      <pre><code lang="html">&lt;svg viewBox="0 0 111 111">
   &lt;path d="M50,50
           L100,100
           M110,110
-          L100,0
+          L100,1
           A30,50 0 1,0 100,100
           Z"
-        fill="none" stroke="#333333"&gt;
-&lt;/svg&gt;</code></pre>
+        fill="none" stroke="#333333">
+&lt;/svg></code></pre>
     </section>
 
     <section class="slide">
@@ -547,12 +541,6 @@ rect {
         <img src="img/first-class-dining.jpg"/>
       </div>
       <a href="http://www.bbc.com/news/magazine-29377549" target="_blank" class="attribution">Photo: BBC News</a>
-    </section>
-
-    <section class="slide" style="text-align: center;">
-      <h2>Feedback!</h2>
-      <p>504-229-6828</p>
-      <p>#CrackSVG (1-5) (comment)<p>
     </section>
 
     <footer class="slide">
