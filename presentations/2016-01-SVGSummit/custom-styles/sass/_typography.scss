@@ -1,0 +1,38 @@
+body {
+  font-family: "sofia_prolight", helvetica, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "questa_granderegular", sans-serif;
+}
+
+h1 {
+  font-size: 300%;
+}
+
+h2 {
+  font-size: 220%;
+}
+
+p,
+ul,
+ol {
+  font-size: 120%;
+  line-height: 1.1;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+  list-style-type: none;
+
+  li {
+    margin-bottom: 2%;
+
+    ul {
+      font-size: 90%;
+      margin-left: 1em;
+    }
+  }
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Cracking the SVG Code</title>
+
+    <!-- Don't alter this, CSSS needs it to work -->
+    <link href="slideshow.css" rel="stylesheet" />
+
+    <!-- Theme-specific styles go here (themes can be reused in multiple talks) -->
+    <link href="custom-styles/base.css" rel="stylesheet" />
+
+    <!-- Talk-specific styles go here -->
+    <link href="talk.css" rel="stylesheet" />
+
+    <!-- Take care of prefixes -->
+    <script src="prefixfree.min.js"></script>
+  </head>
+  <body data-duration="40">
+
+    <header id="intro" class="slide">
+      <div class="intro-container">
+      	<h1 class="talk-title">Cracking the SVG Code</h1>
+        <h4 class="talk-info">SVG Summit, January 21, 2016<br>@brendamarienyc
+        </h4>
+      </div>
+    </header>
+
+    <section class="slide">
+    	<h2>Me</h2>
+    	<ul>
+    		<li class="delayed">Brenda Storer</li>
+    		<li class="delayed">@brendamarienyc</li>
+    		<li class="delayed">Designer at thoughtbot</li>
+    		<li class="delayed">Instructor for Girl Develop It</li>
+        <li class="delayed">Graphic Design background</li>
+    	</ul>
+    </section>
+
+    <section class="slide">
+      <h2>You</h2>
+      <ul>
+        <li class="delayed">Front End Devs? Designers? Both?</li>
+        <li class="delayed">Currently using SVGs?</li>
+        <li class="delayed">Use with JavaScript? D3, Snap.svg, others?</li>
+        <li class="delayed">Print design or illustration background?</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>What we'll cover...</h2>
+      <ul>
+        <li class="delayed">A Brief History</li>
+        <li class="delayed">The SVG Output From Popular Applications</li>
+        <li class="delayed">The SVG Element's Attributes</li>
+        <li class="delayed">Shapes and Paths</li>
+        <li class="delayed">Stroke Attributes</li>
+        <li class="delayed">A Few Real Life Examples</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Development History (abbreviated)</h2>
+      <ul>
+        <li class="delayed">
+          In the 90s, Macromedia and Microsoft introduced VML format for digital drawings</li>
+        <li class="delayed">
+          Adobe Systems and Sun Microsystems submitted a competing format known as PGML
+        </li>
+        <li class="delayed">
+          W3C developed the SVG. W3C SVG Working Group starting in 1998.
+        </li>
+        <li class="delayed">
+          <ul>
+            <li>SVG 1.0 became a W3C Recommendation in 2001.</li>
+            <li>SVG 1.1 became a W3C Recommendation in 2003. There is very little difference between SVG 1.1 and SVG 1.0.</li>
+            <li>SVG 2 will completely rework draft 1.2 with more integration with new web features such as CSS, HTML5 and WOFF.</li>
+          </ul>
+        </li>
+      </ul>
+      <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics" target="_blank" class="attribution">Source: Wikipedia</a>
+    </section>
+
+    <section class="slide">
+      <div class="image-wrapper">
+        <img src="img/svg2.png"  />
+      </div>
+    </section>
+
+  	<section class="slide">
+  		<h1>
+        <a href="http://manhattanjs.com" target="_blank" style="text-decoration: none; position: relative; z-index: 10000;">Our Example Files</a>
+      </h1>
+  	</section>
+
+  	<section class="slide">
+  		<h2>What is familiar from HTML?</h2>
+  		<ul>
+        <li class="delayed">It's XML!</li>
+        <li class="delayed">It's like an HTML document for digital drawings instead of content</li>
+        <li>
+          <ul>
+            <li class="delayed">Unicode characters</li>
+            <li class="delayed">Elements, tags, and attributes</li>
+            <li class="delayed">Nesting</li>
+            <li class="delayed">Bitmaps, anchors (a.k.a. links), text</li>
+            <li class="delayed">AND Shapes, paths, opacity, gradients, rotation, animation</li>
+          </ul>
+        </li>
+      </ul>
+  	</section>
+
+  	<section class="slide">
+  		<h2>A Simple SVG &amp; Her Attributes</h2>
+  		<pre><code lang="html">&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="209px" height="110px" x="0" y="0" viewBox="0 0 209 110"&gt;
+  &lt;title&gt;A Simple Rectangle&lt;/title&gt;
+  &lt;desc&gt;
+    A turquoise rectangle with a black border that is wider than it is tall.
+  &lt;/desc&gt;
+  &lt;a xlink:href="index.html"&gt;
+    &lt;rect x="20" y="20" height="100" width="200" rx="5" ry="5" style="fill: turquoise; stroke: #333333;"/&gt;
+  &lt;/a&gt;
+&lt;/svg&gt;</code></pre>
+  	</section>
+
+  	<section class="slide">
+  		<h2>Name Spacing</h2>
+      <pre><code lang="html">&lt;svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"&gt;&lt;/svg&gt;</code></pre>
+      <ul>
+        <li class="delayed">Provides semantic meaning for the name of that element and its children, provided that the children do not have their own name spaces
+        </li>
+        <li class="delayed">Attributes can have namespaces too. They are prefixed.</li>
+        <li class="delayed">It's a good thing to keep around.</li>
+        <li class="delayed">Its value can be any string, but it is usually a URL.</li>
+        <li class="delayed">The links often go nowhere. It's just a unique identifier.</li>
+      </ul>
+  	</section>
+
+    <section class="slide">
+      <h2>Title &amp; Description</h2>
+      <pre><code lang="html">&lt;svg&gt;
+  &lt;title&gt;A Simple Rectangle&lt;/title&gt;
+  &lt;desc&gt;
+    A turquoise rectangle with a black border that is wider than it is tall.
+  &lt;/desc&gt;
+&lt;/svg&gt;</code></pre>
+      <ul>
+        <li class="delayed">Think of &ldquo;title&rdquo; like an &ldquo;alt&rdquo; tag.</li>
+        <li class="delayed">Good for accessiblity.</li>
+    </section>
+
+  	<section class="slide">
+  		<h2>Viewport</h2>
+  		<pre><code lang="html">&lt;svg width="209px" height="110px"&gt;&lt;/svg&gt;</code></pre>
+      <ul>
+        <li class="delayed">Units can be em, ex (height of the character x), px, pt (1/72 of an inch), pc (1/6 of an inch), cm, mm, in</li>
+        <li class="delayed">Shapes inside of svgs use/inherit same units</li>
+        <li class="delayed">It's all relative.</li>
+      </ul>
+  	</section>
+
+    <section class="slide">
+      <h2>SVG Coordinate System</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 209 110"&gt;&lt;/svg&gt;</code></pre>
+      <p class="delayed">
+        start x&nbsp;&nbsp;start y&nbsp;&nbsp;end x&nbsp;&nbsp;end y
+      </p>
+      <p class="delayed">
+        Start with 0, 0 for less complexity
+      </p>
+      <div class="delayed svg-coordinates">
+        <embed type="image/svg+xml" src="img/svg-coordinate-system.svg" />
+      </div>
+      <p class="delayed">
+        <a href="http://jonibologna.com/svg-viewbox-and-viewport/" target="_blank">Really nice explanation with examples by Joni Trythall</a>
+      </p>
+    </section>
+
+    <section class="slide">
+      <h1>The rest of those attributes...</h1>
+    </section>
+
+    <section class="slide">
+      <h1>Everything else before the shapes is pretty much useless.</h1>
+    </section>
+
+    <section class="slide">
+      <div class="image-wrapper">
+        <img src="img/bye-bye-bye.gif"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h1>Shapes!</h1>
+    </section>
+
+    <section class="slide">
+      <h1>Stroke = Border<br>
+        Fill = Background Color
+      </h1>
+    </section>
+
+    <section class="slide">
+      <h2>Rectangle</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 202 102">
+  &lt;rect width="200" height="100" rx="10" x="1" y="1" fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
+
+      <svg viewBox="0 0 202 102" class="svg-example">
+        <rect width="200" height="100" rx="10" x="1" y="1" fill="turquoise" stroke="#333333">
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Circle</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 102 102"&gt;
+  &lt;circle cx="51" cy="51" r="50" fill="turquoise" stroke="#333333"&gt;
+&lt;/svg&gt;</code></pre>
+
+      <svg viewBox="0 0 102 102" class="svg-example" style="width: 30%;">
+        <circle cx="51" cy="51" r="50" fill="turquoise" stroke="#333333"/>
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Ellipse</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 102 52">
+  &lt;ellipse cx="51" cy="26" rx="50" ry="25" fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
+
+      <svg viewBox="0 0 102 52" class="svg-example">
+        <ellipse cx="51" cy="26" rx="50" ry="25" fill="turquoise" stroke="#333333">
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Line</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 60 30"&gt;
+  &lt;line x1="5" y1="5" x2="50" y2="25" stroke="#333333"&gt;
+&lt;/svg&gt;</code></pre>
+
+      <svg viewBox="0 0 60 30" class="svg-example">
+        <line x1="5" y1="5" x2="50" y2="25" stroke="#333333"/>
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Polyline</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 52 52">
+  &lt;polyline points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
+
+      <svg viewBox="0 0 52 52" class="svg-example">
+        <polyline points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Polygon</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 52 52">
+  &lt;polygon points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+&lt;/svg></code></pre>
+
+      <svg viewBox="0 0 52 52" class="svg-example">
+        <polygon points="1,1 50,1 50,50"  fill="turquoise" stroke="#333333">
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>The Virtual Pen</h2>
+      <svg viewBox="0 0 111 111" class="svg-example">
+        <path d="M50,50
+          L100,100
+          M110,110
+          L100,1
+          A30,50 0 1,0 100,100
+          Z"
+        fill="none" stroke="#333333">
+      </svg>
+    </section>
+
+    <section class="slide">
+      <h2>Path</h2>
+      <pre><code lang="html">&lt;svg viewBox="0 0 111 111">
+  &lt;path d="M50,50
+          L100,100
+          M110,110
+          L100,1
+          A30,50 0 1,0 100,100
+          Z"
+        fill="none" stroke="#333333">
+&lt;/svg></code></pre>
+    </section>
+
+    <section class="slide">
+      <h2>Path</h2>
+      <pre><code style="color: rgb(34, 49, 63);">M or m = moveto (x,y)
+L or l = lineto (x,y)
+A or a = arc (rx,ry x-axis-rotation large-arc-flag,sweep-flag)
+Z or z = closepath</code></pre>
+    <ul>
+      <li>Uppercase = absolute position based on parent</li>
+      <li>Lowercase = relative to its current position</li>
+    </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Arc, An elliptical curve</h2>
+  <pre><code style="color: rgb(34, 49, 63);">A50,50 0 0,1 100,100
+rx,ry x-axis-rotation large-arc-flag,sweep-flag x,y</code></pre>
+      <ul>
+        <li class="delayed">Equal rx and ry mean a circular arch, different mean ellipses</li>
+        <li class="delayed">x-axis-rotation sets the rotation of the arches. Always should be 0.</li>
+        <li class="delayed">large-arc-flag is a true or false value (0 or 1)</li>
+        <li class="delayed">sweep-flag is also a 0 or 1 value. Clockwise (1) or Counter-Clockwise (0)</li>
+        <li class="delayed">x,y is where to draw the arc to from its reference point (based on capital A or lowercase a)</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Cubic Bezier Curve</h2>
+      <pre><code style="color: rgb(34, 49, 63);">C or c = curveto (Cubic Bezier Curve)
+S or s = curveto (Smooth or Shorthand Cubic Bezier Curve)
+C x1,y1 x2,y2 x,y
+S x2,y2 x,y</code></pre>
+      <ul>
+        <li class="delayed">A cubic Bezier curve is defined by four points. Two are endpoints. The origin endpoint is either absolute or relative depending on the lowercase or uppercase “c”. (x,y) is the destination endpoint. The points (x1,y1) and (x2,y2) are control points.
+        </li>
+        <li class="delayed">In a Shorthand or Smooth Cubic Bezier Curve, the start control point is is assumed to be the same as the end control point of the previous curve.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="image-wrapper">
+        <img src="img/massage.gif"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>What’s up with the decimals and dashes?</h2>
+      <ul class="delayed">
+        <li>The following description of the grammar for path data uses Extended Backus-Naur Form [EBNF] (In computer science, Extended Backus–Naur Form (EBNF) is a family of metasyntax notations, any of which can be used to express a context-free grammar.):</li>
+        <li>The processing of the EBNF must consume as much of a given EBNF production as possible, stopping at the point when a character is encountered which no longer satisfies the production. Thus, in the string 'M 100-200', the first coordinate for the "moveto" consumes the characters "100" and stops upon encountering the minus sign because the minus sign cannot follow a digit in the production of a "coordinate". The result is that the first coordinate will be "100" and the second coordinate will be "-200".</li>
+        <li>Similarly, for the string 'M 0.6.5', the first coordinate of the "moveto" consumes the characters "0.6" and stops upon encountering the second decimal point because the production of a "coordinate" only allows one decimal point. The result is that the first coordinate will be "0.6" and the second coordinate will be ".5".</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="image-wrapper">
+        <img src="img/spice-bridge.gif"/>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>In Browser Action!</h2>
+      <ul>
+        <li class="delayed">CSS can do a lot, but cannot animate paths (control the "d" attribute)
+        </li>
+        <li class="delayed" style="text-decoration: line-through;">SMIL (Synchronized Multimedia Integration Language)</li>
+        <li class="delayed">
+          <a href="http://snapsvg.io/" target="_blank">snap.svg</a>
+        </li>
+        <li class="delayed">
+          <a href="http://d3js.org/" target="_blank">D3</a>
+        </li>
+        <li class="delayed">
+          <a href="http://svgjs.com/" target="_blank">Svg.js</a>
+        </li>
+        <li class="delayed">
+          <a href="http://greensock.com/svg-tips" target="_blank">GreenSock</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Stroke attributes</h2>
+      <ul>
+        <li class="delayed">stroke-linejoin (butt, square, round)</li>
+        <li class="delayed">stroke-linecap (miter, round, bevel)</li>
+        <li class="delayed">stroke-opacity</li>
+        <li class="delayed">stroke-dasharray</li>
+        <li class="delayed">stroke-dashoffset</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Animating Stroke Dash</h2>
+      <ul>
+        <li class="delayed">Simulate Drawing</li>
+        <li class="delayed"><a href="http://jakearchibald.com/2013/animated-line-drawing-svg/" target="_blank">&ldquo;Animated line drawing in SVG&rdquo; by Jake Archibald</a>
+        </li>
+        <li class="delayed">
+          <a href="http://jonibologna.com/using-svg-stroke-attributes/" target="_blank">&ldquo;Using SVG Stroke Attributes&rdquo; by Joni Trythall</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>D3 Example</h2>
+      <a href="http://thoughtbot.github.io/fides/" target="_blank">FIDES: A data visualization of one person's PGP Web of Trust</a>
+      <a href="http://bl.ocks.org/mbostock/4062045" target="_blank">Force directed D3 graph</a>
+    </section>
+
+    <section class="slide">
+      <h2>Resources</h2>
+      <ul>
+        <li class="delayed">
+          <a href="http://tutorials.jenkov.com/svg/index.html" target="_blank">&ldquo;SVG Compressed&rdquo; by Jakob Jenkov</a>
+        </li>
+        <li class="delayed">
+          <a href="http://scriptdraw.com/" target="_blank">scriptdraw.com</a>
+        </li>
+        <li class="delayed">
+          <a href="https://www.youtube.com/watch?v=lf7L8X6ZBu8" target="_blank">&ldquo;Styling Animating Scalable Vector Graphics&rdquo; Sara Soueidan CSSConf EU 2014 talk</a>
+        </li>
+        <li class="delayed">
+          <a href="http://svgpocketguide.com/" target="_blank">&ldquo;Pocket Guide to SVG&ldquo; Joni Trythall </a></li>
+        <li class="delayed">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">MDN SVG reference</a>
+        </li>
+        <li class="delayed">
+          <a href="http://codepen.io/collection/AExGJJ/" target="_blank">Simple SVG Shapes on Codepen by me</a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="slide">
+    	<h1>Thank you!</h1>
+    </footer>
+
+    <script src="slideshow.js"></script>
+    <script src="plugins/code-highlight.js"></script>
+    <script>var slideshow = new SlideShow();</script>
+  </body>
+</html>

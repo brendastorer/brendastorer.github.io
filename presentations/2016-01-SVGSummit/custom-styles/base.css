@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'sofia_prolight';
+  src: url("../fonts/SofiaProLight-webfont.eot");
+  src: url("../fonts/SofiaProLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/SofiaProLight-webfont.woff2") format("woff2"), url("../fonts/SofiaProLight-webfont.woff") format("woff"), url("../fonts/SofiaProLight-webfont.ttf") format("truetype"), url("../fonts/SofiaProLight-webfont.svg#sofia_prolight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'questa_granderegular';
+  src: url("../fonts/2-questa_grande_regular_31-webfont.eot");
+  src: url("../fonts/2-questa_grande_regular_31-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/2-questa_grande_regular_31-webfont.woff2") format("woff2"), url("../fonts/2-questa_grande_regular_31-webfont.woff") format("woff"), url("../fonts/2-questa_grande_regular_31-webfont.ttf") format("truetype"), url("../fonts/2-questa_grande_regular_31-webfont.svg#questa_granderegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'inconsolatamedium';
+  src: url("../fonts/inconsolata-webfont.eot");
+  src: url("../fonts/inconsolata-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/inconsolata-webfont.woff2") format("woff2"), url("../fonts/inconsolata-webfont.woff") format("woff"), url("../fonts/inconsolata-webfont.ttf") format("truetype"), url("../fonts/inconsolata-webfont.svg#inconsolatamedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.slide h1, #intro .intro-container, .image-wrapper, .vertical-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); }
+
+* {
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "sofia_prolight", helvetica, sans-serif; }
+
+h1,
+h2 {
+  font-family: "questa_granderegular", sans-serif; }
+
+h1 {
+  font-size: 300%; }
+
+h2 {
+  font-size: 220%; }
+
+p,
+ul,
+ol {
+  font-size: 120%;
+  line-height: 1.1; }
+
+ul,
+ol {
+  list-style-position: inside;
+  list-style-type: none; }
+  ul li,
+  ol li {
+    margin-bottom: 2%; }
+    ul li ul,
+    ol li ul {
+      font-size: 90%;
+      margin-left: 1em; }
+
+select {
+  color: #251f3d; }
+
+code, pre, style, textarea, input {
+  background: #f2f2f2;
+  color: #7060ae;
+  font-family: 'inconsolatamedium', Consolas, 'Andale Mono', 'Courier New', monospace;
+  font-size: 1.7rem; }
+
+code {
+  padding: .2em .2em .1em;
+  white-space: nowrap;
+  border-radius: .2em;
+  border: 1px solid rgba(0, 0, 0, 0.4); }
+
+pre, style, textarea {
+  padding: .5em .7em;
+  margin-left: -.1em;
+  margin-bottom: 1em; }
+  pre code, style code, textarea code {
+    background: 0;
+    border: 0;
+    padding: 0;
+    white-space: pre-wrap; }
+
+textarea {
+  width: 100%; }
+
+/* HTML Syntax highlighting */
+.comment {
+  color: #8c8277;
+  font-style: italic; }
+
+.tag, .punctuation, .selector {
+  color: #251f3d; }
+
+.attr-value, .url {
+  color: #c12d2d; }
+
+.attr-name, .property {
+  color: #3a9ad8; }
+
+.entity {
+  color: #28aaa4; }
+
+table {
+  background-color: #f2f2f2;
+  border-collapse: collapse;
+  color: #251f3d;
+  font-size: 75%;
+  width: 100%; }
+  table code {
+    border: none; }
+
+td {
+  border: 5px solid #d2ceca;
+  padding: .2em .4em; }
+  td pre {
+    border: none; }
+
+.header-row {
+  background-color: #d2ceca;
+  font-size: 120%; }
+
+/**
+	Brenda Storer
+	CSSS slideshow theme
+
+	Based on basic slideshow theme by
+	@author Lea Verou
+	@version 1.0
+*/
+html {
+  background: #d2ceca; }
+
+.slide {
+  background-color: #ea7260;
+  position: absolute;
+  padding: 0 8% 2%;
+  color: white; }
+  .slide:nth-child(4n+2) {
+    background-color: #28aaa4; }
+  .slide:nth-child(4n+3) {
+    background-color: #3a9ad8; }
+  .slide:nth-child(4n+4) {
+    background-color: #7d76ad; }
+  .slide h1 {
+    line-height: 1;
+    text-align: center;
+    width: 100%; }
+  .slide a {
+    position: relative;
+    z-index: 10; }
+  .slide .attribution {
+    bottom: 5px;
+    font-size: 0.8rem;
+    position: fixed;
+    right: 10px;
+    text-decoration: none;
+    z-index: 100; }
+
+#indicator {
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+  padding: .1em .3em;
+  text-shadow: none; }
+
+#timer {
+  background-color: rgba(255, 255, 255, 0.3);
+  top: auto;
+  bottom: 0; }
+
+#intro {
+  background-color: #3a9ad8; }
+  #intro::before {
+    content: "";
+    background: url(../img/cat.jpg) center center;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover; }
+  #intro .intro-container {
+    width: 100%; }
+  #intro .talk-title {
+    position: relative;
+    top: 0;
+    transform: translateY(0); }
+  #intro .talk-info {
+    font-size: 120%;
+    text-align: center;
+    width: 100%; }
+
+.svg-coordinates {
+  background-color: #f2f2f2;
+  width: 60%;
+  margin-top: 1em; }
+
+.image-wrapper {
+  display: block;
+  text-align: center;
+  width: 100%; }
+  .image-wrapper img {
+    height: 90vh;
+    width: auto; }
+
+.svg-example {
+  height: 60%; }

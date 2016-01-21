@@ -1,0 +1,21 @@
+.svg-coordinates {
+  background-color: $soft-white;
+  width: 60%;
+  margin-top: 1em;
+}
+
+.image-wrapper {
+  @extend %vertical-center;
+  display: block;
+  text-align: center;
+  width: 100%;
+
+  img {
+    height: 90vh;
+    width: auto;
+  }
+}
+
+.svg-example {
+  height: 60%;
+}
