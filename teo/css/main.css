@@ -61,7 +61,7 @@ h1 {
 
 h2 {
   font-weight: normal;
-  margin: 0.25em 0 0.5em 0;
+  margin: 0.5em 0;
   width: 100%;
 }
 
@@ -109,6 +109,12 @@ p {
 .inline-navigation-list li {
   display: inline-block;
   margin: 0 1em;
+}
+
+@media (max-width: 450px) {
+  .inline-navigation-list li {
+    margin: 0 0.7em;
+  }
 }
 
 ::-moz-selection {
