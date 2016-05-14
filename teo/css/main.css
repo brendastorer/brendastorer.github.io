@@ -19,14 +19,8 @@ html {
 }
 
 body {
-  font-family: "ff-tisa-web-pro", georgia, serif;
+  font-family: "Tisa", georgia, serif;
   font-weight: 400;
-  opacity: 1;
-  transition: opacity 100ms ease-in;
-}
-
-.wf-loading body {
-  opacity: 0;
 }
 
 a {
@@ -95,9 +89,10 @@ p {
 }
 
 .code {
-  font-family: "inconsolata", monospace;
+  font-family: "Inconsolata", monospace;
   font-size: 1.1em;
   font-weight: 500;
+  margin: 0 0.35em;
 }
 
 .inline-navigation-list {
@@ -115,6 +110,10 @@ p {
   .inline-navigation-list li {
     margin: 0 0.7em;
   }
+}
+
+.no-break {
+  white-space: nowrap;
 }
 
 ::-moz-selection {

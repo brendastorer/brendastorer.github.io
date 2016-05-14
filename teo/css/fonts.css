@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Tisa";
+  src: url("../fonts/tisapro-regular-webfont.eot");
+  src: url("../fonts/tisapro-regular-webfont.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/tisapro-regular-webfont.woff") format("woff"),
+       url("../fonts/tisapro-regular-webfont.ttf")  format("truetype"),
+       url("../fonts/tisapro-regular-webfont.svg#Tisa") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../fonts/inconsolata-webfont.eot");
+  src: url("../fonts/inconsolata-webfont.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/inconsolata-webfont.woff") format("woff"),
+       url("../fonts/inconsolata-webfont.ttf")  format("truetype"),
+       url("../fonts/inconsolata-webfont.svg#Tisa") format("svg");
+  font-style: normal;
+  font-weight: 400;
+}
