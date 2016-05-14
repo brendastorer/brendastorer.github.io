@@ -21,6 +21,7 @@ html {
 body {
   font-family: "Tisa", georgia, serif;
   font-weight: 400;
+  height: 100%;
 }
 
 a {
@@ -66,17 +67,20 @@ h2 {
 }
 
 header {
-  display: flex;
-  align-content: flex-end;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  height: 50vh;
-  padding: 0 1em 1em 1em;
+  height: 50%;
+  position: relative;
+}
+
+.title {
+  padding: 0 1em;
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
 }
 
 footer {
   background-color: #e0daca;
-  height: 50vh;
+  height: 50%;
   padding: 1em 1em 0 1em;
   position: absolute;
   bottom: 0;
