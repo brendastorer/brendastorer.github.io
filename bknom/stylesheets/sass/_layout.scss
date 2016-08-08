@@ -1,0 +1,30 @@
+.fixed-image {
+  @include position(fixed, 0 45% 0 0);
+  @include size(45%, 100vh);
+  background-image: url("../images/cookies-coffee.jpg");
+  background-position: center;
+  background-size: cover;
+  border: 20px solid #fefefe;
+  box-shadow: $base-box-shadow;
+}
+
+main {
+  @include position(absolute, 0 0 0 null);
+  width: 55%;
+}
+
+.logo {
+  @include margin(2em auto 3em);
+  @include size(220px);
+  display: block;
+}
+
+.about {
+  @include margin(2em auto null);
+  @include padding(null 2em);
+  max-width: 600px;
+}
+
+.about__title {
+  text-align: center;
+}
