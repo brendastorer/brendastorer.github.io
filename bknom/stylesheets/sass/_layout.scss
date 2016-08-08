@@ -1,22 +1,39 @@
 .fixed-image {
-  @include position(fixed, 0 45% 0 0);
+  @include position(fixed, 10px 45% null 10px);
   @include size(45%, 100vh);
   background-image: url("../images/cookies-coffee.jpg");
   background-position: center;
   background-size: cover;
   border: 20px solid #fefefe;
   box-shadow: $base-box-shadow;
+  transform: rotate(-4deg);
+  z-index: 10;
+
+  @media (max-width: 800px) {
+    @include size(100%, 50vh);
+    top: -17px;
+  }
 }
 
 main {
   @include position(absolute, 0 0 0 null);
-  width: 55%;
+  width: 50%;
+  z-index: 1;
+
+  @media (max-width: 800px) {
+    margin-top: 50vh;
+    width: 100%;
+  }
 }
 
 .logo {
   @include margin(2em auto 3em);
   @include size(220px);
   display: block;
+
+  @media (max-width: 800px) {
+    @include size(170px);
+  }
 }
 
 .about {
