@@ -20,11 +20,14 @@ main {
 
 a {
   color: #50bc8a;
+  fill: currentColor;
   text-decoration: none;
+  transition: all 250ms ease;
 }
 
 a:hover {
   color: #0681b1;
+  fill: currentColor;
 }
 
 .logo {
@@ -33,7 +36,7 @@ a:hover {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.05em;
   margin: 1em 0;
 }
 

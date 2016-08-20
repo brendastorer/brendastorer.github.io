@@ -1,9 +1,4 @@
 @charset "UTF-8";
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-/* entypo */
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif; }
-
 @font-face {
   font-family: 'Proxima Nova';
   src: url("../fonts/proxima_nova_reg-webfont.eot");
@@ -33,19 +28,24 @@ main {
 
 a {
   color: #50bc8a;
-  text-decoration: none; }
+  fill: currentColor;
+  text-decoration: none;
+  transition: all 250ms ease; }
 
 a:hover {
-  color: #0681b1; }
+  color: #0681b1;
+  fill: currentColor; }
 
 .logo {
   height: auto;
   max-width: 285px; }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.05em;
   margin: 1em 0; }
 
 li {
   display: inline-block;
   margin: 0 1em 1em 1em; }
+
+/*# sourceMappingURL=base.css.map */
