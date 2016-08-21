@@ -1,9 +1,0 @@
-// Media Queries
-@mixin breakpoint($point) {
-  @if $point == large {
-    @media (min-width: 1000px) { @content; }
-  }
-  @else if $point == medium {
-    @media (min-width: 400px) { @content; }
-  }
-}

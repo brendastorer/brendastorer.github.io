@@ -1,46 +1,117 @@
 * {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
 }
 
 body {
-  color: #50bc8a;
+  background-color: white;
+  color: $green;
   font-family: "Proxima Nova", helvetica, arial, sans-serif;
-  font-size: 20px;
   height: 100%;
+  line-height: 1.4;
   padding: 1em;
   text-align: center;
 }
 
 main {
-  @include transform(translateY(-50%));
   margin: 0 auto;
   position: relative;
   top: 50%;
+  transform: translateY(-50%);
+  transition-property: filter, -webkit-filter, -moz-filter, -ms-filter;
+  transition-duration: 500ms;
+  transition-timing: ease;
+  z-index: 1;
+}
+
+.blur {
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
 }
 
 a {
-  color: #50bc8a;
+  color: $green;
   fill: currentColor;
   text-decoration: none;
   transition: all 250ms ease;
-}
 
-a:hover {
-  color: #0681b1;
-  fill: currentColor;
+  &:hover {
+    color: $blue;
+    fill: currentColor;
+  }
 }
 
 .logo {
   height: auto;
-  max-width: 285px;
+  max-width: 290px;
 }
 
-h2 {
+.subheading {
   font-size: 1.05em;
   margin: 1em 0;
 }
 
-li {
+.icon-nav__item {
   display: inline-block;
-  margin: 0 1em 1em 1em;
+  margin: 0 0.7em 1em;
+}
+
+.pop-up {
+  background-image: linear-gradient(rgba($blue, 0.6), rgba($green, 0.6));
+  font-size: 0.85rem;
+  left: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  opacity: 0;
+  padding: 1.75rem;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 500ms ease;
+  visibility: hidden;
+  z-index: -1;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      background-color: rgba(white, 0.3);
+    }
+  }
+}
+
+.pop-up__nav-link {
+  display: inline-block;
+  margin-left: -0.75em;
+  padding: 0.5em 0.75em;
+}
+
+.pop-up__close {
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.pop-up__heading {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.pop-up__nav-item {
+  margin-top: 0.5em;
 }
