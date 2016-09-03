@@ -21,6 +21,7 @@ body {
   background-color: white;
   color: #50bc8a;
   font-family: "Proxima Nova", helvetica, arial, sans-serif;
+  font-weight: 300;
   height: 100%;
   line-height: 1.4;
   padding: 1em;
@@ -53,29 +54,26 @@ a {
 
 .logo {
   height: auto;
-  max-width: 290px; }
+  max-width: 315px; }
 
 .subheading {
-  font-size: 1.05em;
+  font-size: 1.15rem;
   margin: 1em 0; }
 
 .icon-nav__item {
   display: inline-block;
-  margin: 0 0.7em 1em; }
+  margin: 0 0.6em 1em; }
 
 .pop-up {
   background-image: linear-gradient(rgba(6, 129, 177, 0.6), rgba(80, 188, 138, 0.6));
-  font-size: 0.85rem;
+  bottom: 0;
   left: 0;
-  margin: 0 auto;
-  max-width: 500px;
   opacity: 0;
   padding: 1.75rem;
   position: absolute;
   right: 0;
   text-align: left;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   transition: opacity 500ms ease;
   visibility: hidden;
   z-index: -1; }
@@ -88,21 +86,27 @@ a {
     .pop-up a:hover {
       background-color: rgba(255, 255, 255, 0.3); }
 
-.pop-up__nav-link {
-  display: inline-block;
-  margin-left: -0.75em;
-  padding: 0.5em 0.75em; }
-
 .pop-up__close {
   padding: 1em;
   position: absolute;
   right: 0;
   top: 0; }
 
+.pop-up__nav-link {
+  display: block;
+  margin: 0 -0.75em;
+  padding: 0.5em 0.75em; }
+
 .pop-up__heading {
   color: white;
-  font-size: 1.4rem;
-  font-weight: 300; }
+  font-size: 2rem; }
+  @media (max-width: 550px) {
+    .pop-up__heading {
+      font-size: 1.6rem; } }
 
 .pop-up__nav-item {
+  font-size: 1.2rem;
   margin-top: 0.5em; }
+  @media (max-width: 550px) {
+    .pop-up__nav-item {
+      font-size: 1rem; } }
