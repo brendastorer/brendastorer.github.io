@@ -1,0 +1,67 @@
+/*
+mint #78c8a1
+mint-light #b8debf
+off-white #f0f0d8
+cream #ecddd3
+gray-dark #666766
+*/
+
+.splash {
+  margin: 0 auto;
+  max-width: 900px;
+  position: relative;
+  top: 20%;
+  width: 90%;
+}
+
+@media (min-width: 400px) {
+  .splash {
+    top: 40%;
+  }
+}
+
+.logo {
+  height: auto;
+  width: 100%;
+}
+
+.name {
+  float: right;
+  font-family: "Madelyn-Regular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 1rem;
+  -ms-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+
+@media (min-width: 500px) {
+  .name {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .name {
+    font-size: 3rem;
+  }
+}
+
+.coming-soon-banner {
+  clear: both;
+  position: fixed;
+  bottom: 20%;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .coming-soon-banner img {
+    height: auto;
+    width: 180px;
+  }
+}
+
+
