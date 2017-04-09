@@ -21,28 +21,22 @@ gray-dark #666766
 
 .name {
   float: right;
-  font-family: "Madelyn-Regular";
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2rem;
-  line-height: 1;
+  height: auto;
   margin-top: 1rem;
   position: relative;
-  -ms-transform: rotate(-3deg);
-  -webkit-transform: rotate(-3deg);
-  transform: rotate(-3deg);
+  width: 190px;
   z-index: 1;
 }
 
 @media (min-width: 500px) {
   .name {
-    font-size: 2.5rem;
+    width: 230px;
   }
 }
 
 @media (min-width: 700px) {
   .name {
-    font-size: 3rem;
+    width: 300px;
   }
 }
 
