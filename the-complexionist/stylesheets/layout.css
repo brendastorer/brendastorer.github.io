@@ -10,14 +10,8 @@ gray-dark #666766
   margin: 0 auto;
   max-width: 900px;
   position: relative;
-  top: 20%;
+  top: 40%;
   width: 90%;
-}
-
-@media (min-width: 400px) {
-  .splash {
-    top: 40%;
-  }
 }
 
 .logo {
@@ -33,9 +27,11 @@ gray-dark #666766
   font-size: 2rem;
   line-height: 1;
   margin-top: 1rem;
+  position: relative;
   -ms-transform: rotate(-3deg);
   -webkit-transform: rotate(-3deg);
   transform: rotate(-3deg);
+  z-index: 1;
 }
 
 @media (min-width: 500px) {
@@ -55,6 +51,7 @@ gray-dark #666766
   position: fixed;
   bottom: 18%;
   width: 100%;
+  z-index: 0;
 }
 
 @media (max-width: 500px) {
