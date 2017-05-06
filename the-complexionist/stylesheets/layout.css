@@ -1,58 +1,84 @@
 /*
-mint #78c8a1
-mint-light #b8debf
 off-white #f0f0d8
-cream #ecddd3
 gray-dark #666766
+gray-medium #b7b7b7
+gray-light #d8d8d4
+black-soft #282828
+teal #458b8e
+beige #ecddd3
 */
 
 .splash {
+  background-image: url("../images/treatment-room.jpg");
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.site-nav {
+  font-family: "Prata";
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.site-nav li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.site-nav a {
+  color: #282828;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #458b8e;
+}
+
+.splash__header {
+  display: block;
   margin: 0 auto;
   max-width: 900px;
-  position: relative;
-  top: 40%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
   width: 90%;
 }
 
-.logo {
+.splash__logo {
   height: auto;
   width: 100%;
 }
 
-.name {
+.splash__name {
   float: right;
-  height: auto;
-  margin-top: 1rem;
-  position: relative;
-  width: 190px;
-  z-index: 1;
+  font-size: 1rem;
+  margin: 0.75rem 0.5rem 0 0;
 }
 
-@media (min-width: 500px) {
-  .name {
-    width: 230px;
+@media (min-width: 600px) {
+  .splash__name {
+    font-size: 1.5rem;
+    margin: 1.25rem 1.25rem 0 0;
   }
 }
 
-@media (min-width: 700px) {
-  .name {
-    width: 300px;
-  }
-}
-
-.coming-soon-banner {
-  clear: both;
-  position: fixed;
-  bottom: 18%;
+.splash__footer {
+  background-color: rgba(69, 139, 142, 0.75);
+  color: white;
+  text-align: center;
   width: 100%;
-  z-index: 0;
+  padding: 1rem 1rem 0.75rem;
+  position: absolute;
+  bottom: 0;
 }
 
-@media (max-width: 500px) {
-  .coming-soon-banner img {
-    height: auto;
-    width: 180px;
-  }
+.splash__tagline {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
 }
-
-
