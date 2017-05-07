@@ -133,5 +133,63 @@ beige #ecddd3
 
 .treatments__subtitle {
   font-family: "Lato";
+  font-weight: 300;
+}
+
+.treatments__list {
+  margin: 0 auto;
+  max-width: 30em;
+}
+
+.treatments__item {
+  margin-bottom: 3rem;
+}
+
+.treatments__item-title {
+  font-size: 1.5rem;
+}
+
+.products {
+  padding: 3rem 1rem;
+}
+
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+  grid-gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.products__item {
+  display: block;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.products__info {
+  background-color: rgba(69, 139, 142, 0.9);
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  transition: opacity 250ms ease;
+}
+
+.products__info-copy {
   font-weight: 400;
+  padding: 0.5rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.products__info-copy span {
+  display: block;
+}
+
+.products__item:hover .products__info {
+  opacity: 1;
 }
