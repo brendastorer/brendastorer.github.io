@@ -4,7 +4,10 @@ gray-dark #666766
 gray-medium #b7b7b7
 gray-light #d8d8d4
 black-soft #282828
+mint #78c8aa
+light mint #b9f5d8
 teal #458b8e
+teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
 
@@ -14,26 +17,6 @@ beige #ecddd3
   height: 100vh;
   position: relative;
   width: 100%;
-}
-
-.site-nav {
-  font-family: "Prata";
-  padding-top: 0.5rem;
-  text-align: right;
-}
-
-.site-nav li {
-  display: inline-block;
-  margin: 0 0.5rem;
-}
-
-.site-nav a {
-  color: #282828;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #458b8e;
 }
 
 .splash__header {
@@ -62,18 +45,18 @@ beige #ecddd3
 @media (min-width: 600px) {
   .splash__name {
     font-size: 1.5rem;
-    margin: 1.25rem 1.25rem 0 0;
+    margin: 1rem 1rem 0 0;
   }
 }
 
 .splash__footer {
-  background-color: rgba(69, 139, 142, 0.75);
+  background-color: rgba(69, 139, 142, 0.7);
   color: white;
-  text-align: center;
-  width: 100%;
-  padding: 1rem 1rem 0.75rem;
+  padding: 1.35rem 1rem;
   position: absolute;
   bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .splash__tagline {
@@ -81,4 +64,74 @@ beige #ecddd3
   font-size: 1.5rem;
   margin-bottom: 0;
   text-align: center;
+}
+
+.site-nav {
+  font-family: "Playfair Display";
+  letter-spacing: 0.03em;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.site-nav li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.site-nav a {
+  color: #282828;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 250ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  border-color: rgba(69, 139, 142, 0.5);
+}
+
+.about {
+  background-color: white;
+  padding: 3rem;
+  text-align: left;
+}
+
+.about__copy {
+  max-width: 40em;
+}
+
+.treatments {
+  background-image: radial-gradient(
+    circle at bottom right, #b9f5d8, #458b8e 55%
+  );
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.treatments__header {
+  background-image: url("../images/swirl-ornament.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 246px;
+  padding-top: 100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.treatments__title {
+  font-family: "Lato";
+  font-size: 2.7rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.treatments__subtitle {
+  font-family: "Lato";
+  font-weight: 400;
 }

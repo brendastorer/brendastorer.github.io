@@ -4,11 +4,11 @@ gray-dark #666766
 gray-medium #b7b7b7
 gray-light #d8d8d4
 black-soft #282828
+mint #78c8a1
 teal #458b8e
+teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
-
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i');
 
 html {
   background-color: white;
@@ -38,15 +38,18 @@ body {
   text-align: center;
 }
 
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: "Prata";
+  font-family: "Playfair Display";
   font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-style: normal;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   line-height: 1.2;
   margin: 0 0 1rem;
 }
@@ -58,7 +61,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 p {
