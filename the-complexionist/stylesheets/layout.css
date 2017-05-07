@@ -4,36 +4,51 @@ gray-dark #666766
 gray-medium #b7b7b7
 gray-light #d8d8d4
 black-soft #282828
+mint #78c8aa
+light mint #b9f5d8
 teal #458b8e
+teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
+
+.browser-notice {
+  position: absolute;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.browser-notice p {
+  background-color: white;
+  border: 2px solid rgba(69, 139, 142, 0.75);
+  color: #458b8e;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1rem;
+  text-align: center;
+}
+
+@supports (display: flex) {
+  .browser-notice {
+    display: none;
+  }
+}
+
+
+@supports (display: -webkit-flex) {
+  .browser-notice {
+    display: none;
+  }
+}
 
 .splash {
   background-image: url("../images/treatment-room.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
+  text-align: center;
   width: 100%;
-}
-
-.site-nav {
-  font-family: "Prata";
-  padding-top: 0.5rem;
-  text-align: right;
-}
-
-.site-nav li {
-  display: inline-block;
-  margin: 0 0.5rem;
-}
-
-.site-nav a {
-  color: #282828;
-}
-
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #458b8e;
 }
 
 .splash__header {
@@ -44,6 +59,7 @@ beige #ecddd3
   top: 50%;
   left: 0;
   right: 0;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 90%;
 }
@@ -62,18 +78,18 @@ beige #ecddd3
 @media (min-width: 600px) {
   .splash__name {
     font-size: 1.5rem;
-    margin: 1.25rem 1.25rem 0 0;
+    margin: 1rem 1rem 0 0;
   }
 }
 
 .splash__footer {
-  background-color: rgba(69, 139, 142, 0.75);
+  background-color: rgba(69, 139, 142, 0.7);
   color: white;
-  text-align: center;
-  width: 100%;
-  padding: 1rem 1rem 0.75rem;
+  padding: 1.35rem 1rem;
   position: absolute;
   bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .splash__tagline {
@@ -81,4 +97,160 @@ beige #ecddd3
   font-size: 1.5rem;
   margin-bottom: 0;
   text-align: center;
+}
+
+.site-nav {
+  font-family: "Playfair Display";
+  letter-spacing: 0.03em;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+
+.site-nav li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.site-nav a {
+  color: #282828;
+  display: inline-block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  -webkit-transition: border-color 250ms ease;
+  transition: border-color 250ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  border-color: rgba(69, 139, 142, 0.5);
+}
+
+.about {
+  background-color: white;
+  padding: 3rem;
+  text-align: left;
+}
+
+.about__copy {
+  max-width: 40em;
+}
+
+.treatments {
+  background-image: radial-gradient(
+    circle at bottom right, #b9f5d8, #458b8e 55%
+  );
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.treatments__header {
+  background-image: url("../images/swirl-ornament.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 246px;
+  padding-top: 100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.treatments__title {
+  font-family: "Lato";
+  font-size: 2.7rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.treatments__subtitle {
+  font-family: "Lato";
+  font-weight: 300;
+}
+
+.treatments__list {
+  margin: 0 auto;
+  max-width: 30em;
+}
+
+.treatments__item {
+  margin-bottom: 3rem;
+}
+
+.treatments__item-title {
+  font-size: 1.5rem;
+}
+
+.products {
+  padding: 3rem 1rem;
+}
+
+.products__list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+@supports (display: grid) {
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 0.5rem;
+  }
+}
+
+.products__item {
+  display: block;
+  height: auto;
+  margin: 0.25rem;
+  max-width: 400px;
+  position: relative;
+}
+
+@supports (display: grid) {
+  .products__item {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.products__info {
+  background-color: rgba(69, 139, 142, 0.9);
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: opacity 250ms ease;
+  transition: opacity 250ms ease;
+}
+
+.products__info-copy {
+  padding: 0.5rem;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.products__info-copy span {
+  display: block;
+}
+
+.products__info-brand-name {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.products__item:hover .products__info {
+  opacity: 1;
 }
