@@ -70,14 +70,14 @@ p {
 
 a {
   color: #458b8e;
-  text-decoration: none;
   transition: color 200ms ease;
 }
 
 a:active,
 a:focus,
 a:hover {
-  color: #b8debf;
+  color: #282828;
+  text-decoration: none;
 }
 
 fieldset {

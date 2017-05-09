@@ -11,11 +11,43 @@ teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
 
+.browser-notice {
+  position: absolute;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.browser-notice p {
+  background-color: white;
+  border: 2px solid rgba(69, 139, 142, 0.75);
+  color: #458b8e;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 1rem;
+  text-align: center;
+}
+
+@supports (display: flex) {
+  .browser-notice {
+    display: none;
+  }
+}
+
+
+@supports (display: -webkit-flex) {
+  .browser-notice {
+    display: none;
+  }
+}
+
 .splash {
   background-image: url("../images/treatment-room.jpg");
   background-size: cover;
   height: 100vh;
   position: relative;
+  text-align: center;
   width: 100%;
 }
 
@@ -27,6 +59,7 @@ beige #ecddd3
   top: 50%;
   left: 0;
   right: 0;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 90%;
 }
@@ -84,6 +117,8 @@ beige #ecddd3
   display: inline-block;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
+  text-decoration: none;
+  -webkit-transition: border-color 250ms ease;
   transition: border-color 250ms ease;
 }
 
@@ -154,16 +189,36 @@ beige #ecddd3
 }
 
 .products__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-  grid-gap: 0.5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
   margin-top: 3rem;
+}
+
+@supports (display: grid) {
+  .products__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 0.5rem;
+  }
 }
 
 .products__item {
   display: block;
-  margin-bottom: 0;
+  height: auto;
+  margin: 0.25rem;
+  max-width: 400px;
   position: relative;
+}
+
+@supports (display: grid) {
+  .products__item {
+    margin: 0;
+    max-width: none;
+  }
 }
 
 .products__info {
@@ -175,19 +230,25 @@ beige #ecddd3
   opacity: 0;
   height: 100%;
   width: 100%;
+  -webkit-transition: opacity 250ms ease;
   transition: opacity 250ms ease;
 }
 
 .products__info-copy {
-  font-weight: 400;
   padding: 0.5rem;
   position: relative;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
 .products__info-copy span {
   display: block;
+}
+
+.products__info-brand-name {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .products__item:hover .products__info {
