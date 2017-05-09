@@ -105,8 +105,8 @@ input,
 select,
 textarea {
   display: block;
-  font-family: ;
-  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 input,
@@ -117,7 +117,7 @@ textarea {
   border-bottom: 1px solid #d8d8d4;
   border-radius: 0;
   box-shadow: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   padding: 0.5rem;
   transition: border-color 200ms ease;
   width: 100%;
