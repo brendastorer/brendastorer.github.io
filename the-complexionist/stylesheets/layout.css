@@ -250,7 +250,13 @@ beige #ecddd3
 .products__info {
   background-color: rgba(69, 139, 142, 0.9);
   color: white;
+  font-size: 0.85rem;
+  padding: 0.5rem;
   text-align: center;
+}
+
+.user-can-hover .products__info {
+  font-size: 1rem;
   position: absolute;
   top: 0;
   opacity: 0;
@@ -262,6 +268,9 @@ beige #ecddd3
 
 .products__info-copy {
   padding: 0.5rem;
+}
+
+.user-can-hover .products__info-copy {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
