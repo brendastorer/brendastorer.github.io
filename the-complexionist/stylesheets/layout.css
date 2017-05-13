@@ -11,32 +11,6 @@ teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
 
-.button {
-  appearance: none;
-  background-color: #458b8e;
-  border: 0;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  line-height: 1;
-  padding: 0.75em 1.5em;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 250ms ease;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button:focus,
-.button:hover {
-  background-color: #78c8aa;
-}
-
 .browser-notice {
   position: absolute;
   margin-top: 1rem;
@@ -125,10 +99,74 @@ beige #ecddd3
   text-align: center;
 }
 
+@media (max-width: 600px) {
+  .site-nav__list {
+    display: none;
+  }
+
+  .site-nav__list.open {
+    background-color: white;
+    box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
+    display: block;
+    padding: 1rem 1rem 0.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+}
+
+.mobile-nav__trigger {
+  color: #282828;
+  display: none;
+  fill: currentColor;
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav__trigger {
+    display: block;
+  }
+}
+
+.mobile-nav__trigger:focus,
+.mobile-nav__trigger:hover {
+  color: #458b8e;
+}
+
+.mobile-nav__trigger span {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.mobile-nav__close {
+  color: #282828;
+  display: block;
+  fill: currentColor;
+  height: 17px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 17px;
+}
+
+.mobile-nav__close:focus,
+.mobile-nav__close:hover {
+  color: #458b8e;
+}
+
+.mobile-nav__icon {
+  height: auto;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+  width: 24px;
+}
+
 .site-nav {
   font-family: "Playfair Display";
   letter-spacing: 0.03em;
-  padding-right: 0.5rem;
   padding-top: 0.5rem;
   text-align: right;
 }
@@ -138,7 +176,14 @@ beige #ecddd3
   margin: 0 0.75rem;
 }
 
-.site-nav a {
+@media (max-width: 600px) {
+  .site-nav li {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+.site-nav__link {
   color: #282828;
   display: inline-block;
   padding-bottom: 2px;
@@ -148,8 +193,8 @@ beige #ecddd3
   transition: border-color 250ms ease;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav__link:hover,
+.site-nav__link:focus {
   border-color: rgba(69, 139, 142, 0.5);
 }
 
@@ -302,6 +347,34 @@ beige #ecddd3
   margin: 0 auto;
   max-width: 620px;
   padding: 2rem;
+}
+
+.button {
+  appearance: none;
+  background-color: #458b8e;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #78c8aa;
 }
 
 .contact__button {
