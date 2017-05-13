@@ -143,13 +143,19 @@ beige #ecddd3
 
 .mobile-nav__close {
   color: #282828;
-  display: block;
+  display: none;
   fill: currentColor;
   height: 17px;
   position: absolute;
   right: 1rem;
   top: 1rem;
   width: 17px;
+}
+
+@media (max-width: 600px) {
+  .mobile-nav__close {
+    display: block;
+  }
 }
 
 .mobile-nav__close:focus,
