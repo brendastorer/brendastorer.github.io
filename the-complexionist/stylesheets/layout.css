@@ -313,6 +313,7 @@ beige #ecddd3
 
 .user-has-touch .products__info {
   font-size: 0.85rem;
+  height: auto;
   opacity: 1;
   padding: 0.5rem;
   position: static;
