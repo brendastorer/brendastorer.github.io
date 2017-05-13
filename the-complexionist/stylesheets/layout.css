@@ -393,3 +393,15 @@ beige #ecddd3
 .contact__button {
   margin-top: 1rem;
 }
+
+.site-footer {
+  background-color: #282828;
+  color: #d2d2d2;
+  font-size: 0.75rem;
+  padding: 1rem;
+  text-align: right;
+}
+
+.site-footer__copyright {
+  margin-bottom: 0;
+}
