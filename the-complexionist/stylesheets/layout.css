@@ -301,31 +301,37 @@ beige #ecddd3
 .products__info {
   background-color: rgba(69, 139, 142, 0.9);
   color: white;
-  font-size: 0.85rem;
-  padding: 0.5rem;
-  text-align: center;
-}
-
-.user-can-hover .products__info {
   font-size: 1rem;
+  height: 100%;
+  opacity: 0;
   position: absolute;
   top: 0;
-  opacity: 0;
-  height: 100%;
-  width: 100%;
   -webkit-transition: opacity 250ms ease;
   transition: opacity 250ms ease;
+  width: 100%;
+}
+
+.user-has-touch .products__info {
+  font-size: 0.85rem;
+  opacity: 1;
+  padding: 0.5rem;
+  position: static;
+  text-align: center;
 }
 
 .products__info-copy {
   padding: 0.5rem;
-}
-
-.user-can-hover .products__info-copy {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.user-has-touch .products__info-copy {
+  position: static;
+  top: auto;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 .products__info-copy span {

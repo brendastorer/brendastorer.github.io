@@ -1,7 +1,7 @@
-// Detect hover device (leaving touch device as default)
+// Detect touch device
 
-window.addEventListener('mouseover', function onFirstHover() {
-  document.body.classList.add('user-can-hover');
+window.addEventListener('touchstart', function onFirstTouch() {
+  document.body.classList.add('user-has-touch');
   window.removeEventListener('mouseover', onFirstHover, false);
 }, false);
 
