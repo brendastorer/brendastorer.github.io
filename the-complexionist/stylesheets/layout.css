@@ -349,18 +349,48 @@ beige #ecddd3
 }
 
 .products__line {
-  align-items: center;
   color: white;
-  display: flex;
   width: 100%;
 }
 
+@media (min-width: 830px) {
+  .products__line {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.8rem;
+  }
+}
+
 .products__line-image {
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 830px) {
+  .products__line-image {
+    width: 50%;
+  }
 }
 
 .products__line-name {
-  font-size: 1.7rem;
+  font-size: 1.7em;
+}
+
+.products__line-copy {
+  padding: 1rem 3rem;
+}
+
+@media (max-width: 830px) {
+  .products__line-copy {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .products__line-copy {
+    font-size: 1rem;
+  }
 }
 
 .products__line.january-labs {
@@ -377,10 +407,6 @@ beige #ecddd3
 
 .products__line.lira {
   background-color: #458b8e;
-}
-
-.products__line-copy {
-  padding: 1rem 3rem;
 }
 
 .products__line:nth-child(even) .products__line-copy {
@@ -410,10 +436,13 @@ beige #ecddd3
 }
 
 .site-footer {
+  -webkit-align-items: center;
   align-items: center;
   background-color: #282828;
+  display: -webkit-flex;
   display: flex;
   font-size: 0.75rem;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   padding: 1.5rem;
   text-align: center;
