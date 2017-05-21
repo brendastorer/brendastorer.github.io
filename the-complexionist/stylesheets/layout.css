@@ -377,6 +377,12 @@ beige #ecddd3
   font-size: 1.7em;
 }
 
+@media (max-width: 600px) {
+  .products__line-name {
+    font-size: 1.3em;
+  }
+}
+
 .products__line-copy {
   padding: 1rem 3rem;
 }
@@ -395,6 +401,10 @@ beige #ecddd3
 
 .products__line.january-labs {
   background-color: #5693a0;
+}
+
+.products__line.tizo {
+  background-color: #4082b6;
 }
 
 .products__line.pca-skin {
