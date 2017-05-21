@@ -47,7 +47,7 @@ beige #ecddd3
 
 .browser-notice {
   position: absolute;
-  margin-top: 1rem;
+  top: 4rem;
   width: 100%;
 }
 
@@ -77,7 +77,8 @@ beige #ecddd3
 }
 
 .splash {
-  background-image: url("../images/treatment-room.jpg");
+  background-image: url("../images/lotion-jar.jpg");
+  background-position: center top;
   background-size: cover;
   display: -webkit-flex;
   display: flex;
@@ -91,16 +92,30 @@ beige #ecddd3
   width: 100%;
 }
 
+.splash::before {
+  background-color: white;
+  content: "";
+  opacity: 0.55;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
 .splash__header {
   display: block;
   margin: 0 auto;
   max-width: 1000px;
   width: 90%;
+  z-index: 1;
 }
 
 .splash__logo {
   height: auto;
   width: 100%;
+  z-index: 1;
 }
 
 .splash__name {
@@ -122,6 +137,7 @@ beige #ecddd3
   padding: 1.35rem 1rem 1.6rem;
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 
 .splash__tagline {
@@ -236,6 +252,7 @@ beige #ecddd3
   letter-spacing: 0.03em;
   padding-top: 0.5rem;
   text-align: right;
+  z-index: 2;
 }
 
 .site-nav li {
@@ -267,8 +284,14 @@ beige #ecddd3
 
 .about {
   background-color: white;
-  padding: 3rem;
+  overflow: hidden;
   text-align: left;
+}
+
+@media (max-width: 600px) {
+  .about__title {
+    font-size: 2rem;
+  }
 }
 
 .about__subtitle {
@@ -279,11 +302,64 @@ beige #ecddd3
   margin-bottom: 0.5rem;
 }
 
+.about__image-container {
+  float: left;
+  height: 900px;
+  margin-right: 4rem;
+  width: 469px;
+}
+
+@media (max-width: 1000px) {
+  .about__image-container {
+    height: auto;
+    margin: 0 2rem 1rem 0;
+    width: 50%;
+  }
+
+  @supports (object-fit: cover) {
+    .about__image-container {
+      height: 584px;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .about__image-container {
+    float: none;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.about__image {
+  height: auto;
+  width: 100%;
+}
+
+@supports (object-fit: cover) {
+  .about__image {
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: top center;
+    width: auto;
+  }
+}
+
 .about__copy {
-  max-width: 40em;
+  margin: 0 auto;
+  max-width: 70em;
+  padding: 3rem 2rem 0;
+}
+
+@media (max-width: 580px) {
+  .about__copy {
+    padding: 2rem 1rem;
+  }
 }
 
 .treatments {
+  background-color: #458b8e;
   background-image: radial-gradient(
     circle at bottom right, #93d9b4, #458b8e 55%
   );
@@ -312,6 +388,12 @@ beige #ecddd3
   text-transform: uppercase;
 }
 
+@media (max-width: 600px) {
+  .treatments__title {
+    font-size: 2rem;
+  }
+}
+
 .treatments__subtitle {
   font-family: "Lato";
   font-weight: 300;
@@ -330,6 +412,12 @@ beige #ecddd3
   font-size: 1.6rem;
 }
 
+@media (max-width: 600px) {
+  .treatments__item-title {
+    font-size: 1.3rem;
+  }
+}
+
 .treatments__item-meta em {
   margin-left: 0.25rem;
 }
@@ -338,9 +426,16 @@ beige #ecddd3
   padding: 3rem 0 0;
 }
 
+@media (max-width: 600px) {
+  .products__title {
+    font-size: 2rem;
+  }
+}
+
 .products__subtitle {
   margin: 0 auto;
   max-width: 650px;
+  padding: 0 1rem;
 }
 
 .products__lines {
@@ -349,38 +444,80 @@ beige #ecddd3
 }
 
 .products__line {
-  align-items: center;
   color: white;
-  display: flex;
   width: 100%;
 }
 
+@media (min-width: 850px) {
+  .products__line {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0.8rem;
+  }
+}
+
 .products__line-image {
-  width: 50%;
+  width: 100%;
+}
+
+@media (min-width: 850px) {
+  .products__line-image {
+    flex-shrink: 0;
+    width: 50%;
+  }
 }
 
 .products__line-name {
-  font-size: 1.7rem;
+  font-size: 1.7em;
 }
 
-.products__line.january-labs {
-  background-color: #5693a0;
-}
-
-.products__line.pca-skin {
-  background-color: #77acdf;
-}
-
-.products__line.dermalogica {
-  background-color: #9292cb;
-}
-
-.products__line.lira {
-  background-color: #458b8e;
+@media (max-width: 600px) {
+  .products__line-name {
+    font-size: 1.3em;
+  }
 }
 
 .products__line-copy {
   padding: 1rem 3rem;
+}
+
+@media (max-width: 850px) {
+  .products__line-copy {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .products__line-copy {
+    font-size: 1rem;
+  }
+}
+
+.products__line.january-labs {
+  background-color: #5693a0;
+  background-image: linear-gradient(#5693a0, #83c1c6);
+}
+
+.products__line.tizo {
+  background-color: #4082b6;
+  background-image: linear-gradient(#4082b6, #74aac1);
+}
+
+.products__line.pca-skin {
+  background-color: #77acdf;
+  background-image: linear-gradient(#77acdf, #8ebed6);
+}
+
+.products__line.dermalogica {
+  background-color: #9292cb;
+  background-image: linear-gradient(#9292cb, #a8a8cc);
+}
+
+.products__line.lira {
+  background-color: #458b8e;
+  background-image: linear-gradient(#458b8e, #72afaa);
 }
 
 .products__line:nth-child(even) .products__line-copy {
@@ -397,6 +534,12 @@ beige #ecddd3
   padding: 4rem 1rem;
 }
 
+@media (max-width: 600px) {
+  .contact__title {
+    font-size: 1.7rem;
+  }
+}
+
 .contact__form-container {
   background-color: white;
   box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
@@ -405,15 +548,26 @@ beige #ecddd3
   padding: 2rem;
 }
 
+@media (max-width: 600px) {
+  .contact__form input,
+  .contact__form textarea
+   {
+    font-size: 0.85rem;
+  }
+}
+
 .contact__button {
   margin-top: 1rem;
 }
 
 .site-footer {
+  -webkit-align-items: center;
   align-items: center;
   background-color: #282828;
+  display: -webkit-flex;
   display: flex;
   font-size: 0.75rem;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   padding: 1.5rem;
   text-align: center;
