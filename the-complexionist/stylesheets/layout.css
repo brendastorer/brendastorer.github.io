@@ -335,7 +335,60 @@ beige #ecddd3
 }
 
 .products {
-  padding: 3rem 1rem;
+  padding: 3rem 0 0;
+}
+
+.products__subtitle {
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.products__lines {
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.products__line {
+  align-items: center;
+  color: white;
+  display: flex;
+  width: 100%;
+}
+
+.products__line-image {
+  width: 50%;
+}
+
+.products__line-name {
+  font-size: 1.7rem;
+}
+
+.products__line.january-labs {
+  background-color: #5693a0;
+}
+
+.products__line.pca-skin {
+  background-color: #77acdf;
+}
+
+.products__line.dermalogica {
+  background-color: #9292cb;
+}
+
+.products__line.lira {
+  background-color: #458b8e;
+}
+
+.products__line-copy {
+  padding: 1rem 3rem;
+}
+
+.products__line:nth-child(even) .products__line-copy {
+  order: 1;
+}
+
+.products__line:nth-child(even) .products__line-image {
+  order: 2;
 }
 
 .products__list {
