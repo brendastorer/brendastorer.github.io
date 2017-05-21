@@ -11,6 +11,40 @@ teal transparent rgba(69, 139, 142, 0.75)
 beige #ecddd3
 */
 
+
+/*Universal Style Elements*/
+
+.button {
+  appearance: none;
+  background-color: #458b8e;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  padding: 0.75em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: background-color 250ms ease;
+  transition: background-color 250ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button:focus,
+.button:hover {
+  background-color: #78c8aa;
+}
+
+
+/*Section Specific Styles*/
+
 .browser-notice {
   position: absolute;
   margin-top: 1rem;
@@ -45,6 +79,12 @@ beige #ecddd3
 .splash {
   background-image: url("../images/treatment-room.jpg");
   background-size: cover;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   height: 100vh;
   position: relative;
   text-align: center;
@@ -54,13 +94,7 @@ beige #ecddd3
 .splash__header {
   display: block;
   margin: 0 auto;
-  max-width: 900px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  max-width: 1000px;
   width: 90%;
 }
 
@@ -85,18 +119,45 @@ beige #ecddd3
 .splash__footer {
   background-color: rgba(69, 139, 142, 0.7);
   color: white;
-  padding: 1.35rem 1rem;
-  position: absolute;
-  bottom: 0;
+  padding: 1.35rem 1rem 1.6rem;
   text-align: center;
   width: 100%;
 }
 
 .splash__tagline {
   color: white;
-  font-size: 1.5rem;
-  margin-bottom: 0;
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .splash__tagline {
+    font-size: 1.4rem;
+  }
+}
+
+.splash__condition {
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .splash__condition {
+    white-space: nowrap;
+  }
+}
+
+.splash__condition::before {
+  background-image: url("../images/star-bullet-white.svg");
+  content: "";
+  height: 12px;
+  display: inline-block;
+  margin: 0 0.5rem;
+  width: 12px;
 }
 
 @media (max-width: 600px) {
@@ -210,13 +271,21 @@ beige #ecddd3
   text-align: left;
 }
 
+.about__subtitle {
+  margin-bottom: 1.5rem;
+}
+
+.about__subtitle:not(:last-of-type) {
+  margin-bottom: 0.5rem;
+}
+
 .about__copy {
   max-width: 40em;
 }
 
 .treatments {
   background-image: radial-gradient(
-    circle at bottom right, #b9f5d8, #458b8e 55%
+    circle at bottom right, #93d9b4, #458b8e 55%
   );
   color: white;
   padding: 2rem 1rem;
@@ -227,15 +296,15 @@ beige #ecddd3
   background-image: url("../images/swirl-ornament.svg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 246px;
-  padding-top: 100px;
+  background-size: auto 246px;
+  padding: 100px 0 70px;
   margin: 0 auto;
   width: 100%;
 }
 
 .treatments__title {
   font-family: "Lato";
-  font-size: 2.7rem;
+  font-size: 3rem;
   font-weight: 300;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
@@ -250,15 +319,19 @@ beige #ecddd3
 
 .treatments__list {
   margin: 0 auto;
-  max-width: 30em;
+  max-width: 36em;
 }
 
 .treatments__item {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .treatments__item-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.treatments__item-meta em {
+  margin-left: 0.25rem;
 }
 
 .products {
@@ -362,46 +435,56 @@ beige #ecddd3
   padding: 2rem;
 }
 
-.button {
-  appearance: none;
-  background-color: #458b8e;
-  border: 0;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1;
-  padding: 0.75em 1.5em;
-  text-align: center;
-  text-decoration: none;
-  -webkit-transition: background-color 250ms ease;
-  transition: background-color 250ms ease;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-
-.button:focus,
-.button:hover {
-  background-color: #78c8aa;
-}
-
 .contact__button {
   margin-top: 1rem;
 }
 
 .site-footer {
+  align-items: center;
   background-color: #282828;
-  color: #d2d2d2;
+  display: flex;
   font-size: 0.75rem;
-  padding: 1rem;
-  text-align: right;
+  justify-content: space-between;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    display: block;
+  }
+}
+
+.site-footer__nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+@media (max-width: 600px) {
+  .site-footer__nav li {
+    display: block;
+    margin: 0 0 1rem;
+  }
+}
+
+.site-footer__link {
+  color: white;
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+.site-footer__nav img {
+  vertical-align: middle;
+}
+
+.site-footer__link:focus,
+.site-footer__link:hover {
+  color: white;
+  opacity: 1;
 }
 
 .site-footer__copyright {
+  color: white;
   margin-bottom: 0;
+  opacity: 0.75;
 }
