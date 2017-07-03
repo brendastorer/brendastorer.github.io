@@ -249,6 +249,7 @@ beige #ecddd3
 
 .site-nav {
   font-family: "Playfair Display";
+  font-size: 0.9rem;
   letter-spacing: 0.03em;
   padding-top: 0.5rem;
   text-align: right;
@@ -558,6 +559,37 @@ beige #ecddd3
 
 .contact__button {
   margin-top: 1rem;
+}
+
+.client-forms {
+  padding: 3rem 1rem;
+}
+
+.client-forms__title {
+  text-align: center;
+}
+
+.client-forms__forms {
+  margin: 0 auto;
+  max-width: 36em;
+}
+
+.client-forms__form {
+  margin: 1rem 0;
+}
+
+.client-forms__link {
+  color: #282828;
+  text-decoration: none;
+}
+
+.client-forms__link:focus,
+.client-forms__link:hover {
+  color: #458b8e;
+}
+
+.client-forms__link img {
+  margin-left: 0.35rem;
 }
 
 .site-footer {
