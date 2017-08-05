@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Personal Website & Resume for Web Developer Sally Student"/>
+    <title>ABBA - The Quiz</title>
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700|Raleway:100|Source+Sans+Pro:400i" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-header__title">
+        <img src="images/abba-logo.png" alt="ABBA" class="site-header__title-image">
+        <span class="site-header__title-text">The Quiz</span>
+      </h1>
+    </header>
+
+    <main>
+      <section class="non-quiz-section">
+        <button type="submit">Start</button>
+      </section>
+
+      <section class="quiz-section">
+        <div class="quiz-section__wrapper">
+          <div class="quiz-section__content">
+            <header class="quiz-section__header">
+              <h2>
+                Question 1 / 10
+              </h2>
+              <h2>
+                Score 0 / 0
+              </h2>
+            </header>
+            <form class="quiz-form">
+              <h3 class="quiz-form__question">
+                What year did ABBA win the Eurovision Song Contest that launched them into stardom?
+              </h3>
+              <input class="quiz-form__input" type="radio" name="question-1" id="question-1-choice-1" value="1976">
+              <label class="quiz-form__option" for="question-1-choice-1">
+                <span class="quiz-form__option-answer">
+                  1976
+                </span>
+              </label>
+
+              <input class="quiz-form__input wrong-answer" type="radio" name="question-1" id="question-1-choice-2" value="1981">
+              <label class="quiz-form__option" for="question-1-choice-2">
+                <span class="quiz-form__option-answer">
+                  1981
+                </span>
+                <span class="quiz-form__response">
+                  wrong!
+                </span>
+              </label>
+
+              <input class="quiz-form__input correct-answer" type="radio" name="question-1" id="question-1-choice-3" value="1974">
+              <label class="quiz-form__option" for="question-1-choice-3">
+                <span class="quiz-form__option-answer">
+                  1974
+                </span>
+                <span class="quiz-form__response">
+                  correct!
+                </span>
+              </label>
+
+              <input class="quiz-form__input" type="radio" name="question-1" id="question-1-choice-4" value="1971">
+              <label class="quiz-form__option" for="question-1-choice-4">
+                <span class="quiz-form__option-answer">
+                  1971
+                </span>
+              </label> 
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="non-quiz-section">
+        <h2>Score 10/10</h2>
+        <h3 class="non-quiz-section__info">Great job! You truly are a dancing queen!</h3>
+        <img src="images/abba-dancing-queen.gif" alt='A silent clip of Frida performing Dancing Queen with subtitles of the lyrics "Dancing Queen feel the beat from the tambourine"' class="non-quiz-section__image">
+        <button type="reset">Try again</button>
+      </section>
+
+    </main>
+  </body>
+</html>
