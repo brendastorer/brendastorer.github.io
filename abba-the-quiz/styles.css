@@ -21,9 +21,11 @@ body {
   position: relative;
 }
 
-img {
-  height: auto;
-  width: 100%;
+em {
+  font-family: "Source Sans Pro", helvetica, sans-serif;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: 600;
 }
 
 button {
@@ -52,6 +54,12 @@ button:hover {
   background-position: right center;
 }
 
+.hidden {
+  height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
 .site-header {
   font-family: "Raleway", helvetica, sans-serif;
   font-weight: 100;
@@ -61,7 +69,9 @@ button:hover {
 }
 
 .site-header__title-image {
+  height: auto;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .site-header__title-text {
@@ -87,6 +97,7 @@ button:hover {
 }
 
 .quiz-section {
+  display: none;
   padding-left: 10px;
   padding-right: 10px;
   position: absolute;
@@ -137,6 +148,7 @@ button:hover {
   border: 2px solid #f6ecff;
   border-radius: 9999px;
   cursor: pointer;
+  font-size: 0.9rem;
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 0.5rem 1.25rem;
@@ -170,4 +182,8 @@ button:hover {
 
 .quiz-form__input.wrong-answer:checked + .quiz-form__option .quiz-form__option-answer {
   text-decoration: line-through;
+}
+
+.quiz-results {
+  display: none;
 }
