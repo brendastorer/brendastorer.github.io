@@ -63,14 +63,12 @@ button:hover {
 .site-header {
   font-family: "Raleway", helvetica, sans-serif;
   font-weight: 100;
-  margin-bottom: 1rem;
   text-align: center;
   text-transform: uppercase;
 }
 
 .site-header__title-image {
   height: auto;
-  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -80,20 +78,27 @@ button:hover {
 }
 
 .non-quiz-section {
-  margin: 1rem auto;
+  margin: 0 auto 2rem;
   max-width: 700px;
   text-align: center;
+}
+
+.non-quiz-section__title {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .non-quiz-section__info {
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-style: italic;
   font-weight: 400;
-  margin: 1rem 10px;
+  margin: 0.5rem 10px 1rem;
 }
 
 .non-quiz-section__image {
-  margin-bottom: 1rem;
+  display: block;
+  margin: 0 auto 1rem;
 }
 
 .quiz-section {
@@ -133,6 +138,10 @@ button:hover {
   text-transform: uppercase;
 }
 
+.quiz-results {
+  display: none;
+}
+
 .quiz-form__question {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -152,6 +161,7 @@ button:hover {
   justify-content: space-between;
   margin-bottom: 1rem;
   padding: 0.5rem 1.25rem;
+  position: relative;
 }
 
 .quiz-form__input:focus + .quiz-form__option,
@@ -168,22 +178,73 @@ button:hover {
 }
 
 .quiz-form__response {
+  animation: fade-in 500ms ease;
+  display: inline-block;
   font-family: "Source Sans Pro", helvetica, sans-serif;
   font-size: 0.875rem;
   font-style: italic;
   font-weight: 400;
 }
 
-.quiz-form__input.wrong-answer:checked + .quiz-form__option {
+.quiz-form__input.wrong-answer + .quiz-form__option {
   background: white;
   border-color: currentColor;
   color: #c52d2f;
 }
 
-.quiz-form__input.wrong-answer:checked + .quiz-form__option .quiz-form__option-answer {
+.quiz-form__input.wrong-answer + .quiz-form__option .quiz-form__option-answer {
   text-decoration: line-through;
 }
 
-.quiz-results {
-  display: none;
+/* Stars twinkling in animation for the correct answer */
+
+.quiz-form__input.correct-answer + .quiz-form__option::after,
+.quiz-form__input.correct-answer + .quiz-form__option::before,
+.quiz-form__input.correct-answer + .quiz-form__option .quiz-form__response::after,
+.quiz-form__input.correct-answer + .quiz-form__option .quiz-form__response::before {
+  animation: fade-in 1s ease;
+  animation-fill-mode: forwards;
+  background-image: url("images/star.svg");
+  content: "";
+  height: 58px;
+  width: 56px;
+  position: absolute;
+}
+
+.quiz-form__input.correct-answer + .quiz-form__option::before {
+  animation-delay: 500ms;
+  left: -10px;
+  top: -5px;
+  visibility: hidden;
+}
+
+.quiz-form__input.correct-answer + .quiz-form__option::after {
+  left: 200px;
+  bottom: 5px;
+}
+
+.quiz-form__input.correct-answer + .quiz-form__option .quiz-form__response::after {
+  animation-delay: 100ms;
+  right: 100px;
+  top: 0;
+  visibility: hidden;
+}
+
+.quiz-form__input.correct-answer + .quiz-form__option .quiz-form__response::before {
+  animation-delay: 250ms;
+  right: 0;
+  top: 20px;
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 100%;
+    visibility: visible;
+  }
 }

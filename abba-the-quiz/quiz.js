@@ -85,45 +85,54 @@ let CURRENT_QUESTION = 0;
 let CORRECT_ANSWER_COUNT = 0;
 let QUESTIONS_ANSWERED = 0;
 const TOTAL_QUESTIONS = QUIZ.length;
+const QUIZ_SECTION = "#js-quiz-section";
+const QUIZ_RESULTS = "#js-quiz-results";
+const QUIZ_QUESTION = "#js-quiz-question";
+const QUIZ_FORM_ID = "js-quiz-form";
+const HIDDEN_ELEMENTS = ".js-hide-while-taking-quiz";
+const QUIZ_INPUT_CLASS = "js-quiz-input";
+const QUIZ_OPTION_CLASS = "js-quiz-option";
 
 function renderQuestion() {
   const currentQuestion = QUIZ[CURRENT_QUESTION];
+  const currentQuestionCount = CURRENT_QUESTION + 1;
+
   return `
     <header class="quiz-section__header">
       <h2>
-        Question ${CURRENT_QUESTION + 1} / ${TOTAL_QUESTIONS}
+        Question ${currentQuestionCount} / ${TOTAL_QUESTIONS}
       </h2>
       <h2>
         Score ${CORRECT_ANSWER_COUNT} / ${QUESTIONS_ANSWERED}
       </h2>
     </header>
-    <form class="quiz-form" id="js-quiz-form">
+    <form class="quiz-form" id="${QUIZ_FORM_ID}">
       <h3 class="quiz-form__question">
         ${currentQuestion.question}
       </h3>
-      <input class="quiz-form__input js-quiz-input" type="radio" name="question" id="option-1" value="${currentQuestion.option1}">
-      <label class="quiz-form__option js-quiz-option" for="option-1">
+      <input class="quiz-form__input ${QUIZ_INPUT_CLASS}" type="radio" name="question" id="option-1" value="${currentQuestion.option1}">
+      <label class="quiz-form__option ${QUIZ_OPTION_CLASS}" for="option-1">
         <span class="quiz-form__option-answer">
           ${currentQuestion.option1}
         </span>
       </label>
 
-      <input class="quiz-form__input js-quiz-input" type="radio" name="question" id="option-2" value="${currentQuestion.option2}">
-      <label class="quiz-form__option js-quiz-option" for="option-2">
+      <input class="quiz-form__input ${QUIZ_INPUT_CLASS}" type="radio" name="question" id="option-2" value="${currentQuestion.option2}">
+      <label class="quiz-form__option ${QUIZ_OPTION_CLASS}" for="option-2">
         <span class="quiz-form__option-answer">
           ${currentQuestion.option2}
         </span>
       </label>
 
-      <input class="quiz-form__input js-quiz-input" type="radio" name="question" id="option-3" value="${currentQuestion.option3}">
-      <label class="quiz-form__option js-quiz-option" for="option-3">
+      <input class="quiz-form__input ${QUIZ_INPUT_CLASS}" type="radio" name="question" id="option-3" value="${currentQuestion.option3}">
+      <label class="quiz-form__option ${QUIZ_OPTION_CLASS}" for="option-3">
         <span class="quiz-form__option-answer">
           ${currentQuestion.option3}
         </span>
       </label>
 
-      <input class="quiz-form__input js-quiz-input" type="radio" name="question" id="option-4" value="${currentQuestion.option4}">
-      <label class="quiz-form__option js-quiz-option" for="option-4">
+      <input class="quiz-form__input ${QUIZ_INPUT_CLASS}" type="radio" name="question" id="option-4" value="${currentQuestion.option4}">
+      <label class="quiz-form__option ${QUIZ_OPTION_CLASS}" for="option-4">
         <span class="quiz-form__option-answer">
           ${currentQuestion.option4}
         </span>
@@ -134,42 +143,52 @@ function renderQuestion() {
 }
 
 function renderResults() {
-  return `
-    <h2>Score ${CORRECT_ANSWER_COUNT} / ${QUESTIONS_ANSWERED}</h2>
-    <h3 class="non-quiz-section__info">Great job! You truly are a dancing queen!</h3>
-    <img src="images/abba-dancing-queen.gif" alt='A silent clip of Frida performing Dancing Queen with subtitles of the lyrics "Dancing Queen feel the beat from the tambourine"' class="non-quiz-section__image">
-    <button type="reset" class="js-restart">Try again</button>
-  `;
+  if (CORRECT_ANSWER_COUNT > (TOTAL_QUESTIONS / 2)) {
+    return `
+      <h2 class="non-quiz-section__title">Score ${CORRECT_ANSWER_COUNT} / ${QUESTIONS_ANSWERED}</h2>
+      <h3 class="non-quiz-section__info">Great job! You truly are a dancing queen!</h3>
+      <img src="images/abba-dancing-queen.gif" alt='A silent clip of Frida performing Dancing Queen with subtitles of the lyrics "Dancing Queen feel the beat from the tambourine"' class="non-quiz-section__image">
+      <button type="reset" class="js-restart">Try again</button>
+    `;
+  }
+  else {
+    return `
+      <h2 class="non-quiz-section__title">Score ${CORRECT_ANSWER_COUNT} / ${QUESTIONS_ANSWERED}</h2>
+      <h3 class="non-quiz-section__info">Sorry. You are the loser in this melody. Better luck next time.</h3>
+      <img src="images/abba-loser-fall.gif" alt='A silent clip of Agnethe singing The Winner Takes It All with subtitles of the lyrics "The winner takes it all, the loser has to fall."' class="non-quiz-section__image">
+      <button type="reset" class="js-restart">Try again</button>
+    `;
+  }
 }
 
 function showQuestion() {
-  $("#js-quiz-question").empty().prepend(renderQuestion);
+  $(QUIZ_QUESTION).empty().prepend(renderQuestion);
   evaluateAnswer();
   submitOnClick();
 }
 
 function showResults() {
-  $("#js-quiz-section").hide();
-  $("#js-quiz-results").show().prepend(renderResults);
+  $(QUIZ_SECTION).hide();
+  $(QUIZ_RESULTS).show().prepend(renderResults);
   $(restartQuiz);
 }
 
 function evaluateAnswer() {
-  $("#js-quiz-form").submit(function(event) {
+  $(`#${QUIZ_FORM_ID}`).submit(function(event) {
     event.preventDefault();
     const currentQuestion = QUIZ[CURRENT_QUESTION];
-    const answer = $(this).find(".js-quiz-input:checked");
+    const answer = $(this).find(`.${QUIZ_INPUT_CLASS}:checked`);
     const answerValue = answer.val();
 
     if (answerValue === currentQuestion.answer) {
       $(answer).addClass("correct-answer");
-      $(answer).next(".js-quiz-option").append("<span class='quiz-form__response'>correct!</span>");
+      $(answer).next(`.${QUIZ_OPTION_CLASS}`).append("<span class='quiz-form__response'>correct!</span>");
       CORRECT_ANSWER_COUNT++;
     }
     else {
       // also display correct answer
       $(answer).addClass("wrong-answer");
-      $(answer).next(".js-quiz-option").append("<span class='quiz-form__response'>wrong!</span>");
+      $(answer).next(`.${QUIZ_OPTION_CLASS}`).append("<span class='quiz-form__response'>wrong!</span>");
     }
 
     QUESTIONS_ANSWERED++;
@@ -178,23 +197,25 @@ function evaluateAnswer() {
   });
 }
 
+function submitOnClick() {
+  $(`.${QUIZ_OPTION_CLASS}`).on("click", function() {
+    $(this).prev(`.${QUIZ_INPUT_CLASS}`).attr("checked", true);
+    $(`#${QUIZ_FORM_ID}`).submit();
+  });
+}
+
 function nextStep(index) {
+  const timeBetweenSteps = 1500;
+
   if (QUESTIONS_ANSWERED === TOTAL_QUESTIONS) {
-    showResults();
+    setTimeout(showResults, timeBetweenSteps);
   } 
   else {
     index++;
   }
 
   CURRENT_QUESTION = index;
-  setTimeout(showQuestion, 1500);
-}
-
-function submitOnClick() {
-  $(".js-quiz-option").on("click", function() {
-    $(this).prev(".js-quiz-input").attr("checked", true);
-    $("#js-quiz-form").submit();
-  });
+  setTimeout(showQuestion, timeBetweenSteps);
 }
 
 function restartQuiz() {
@@ -203,17 +224,17 @@ function restartQuiz() {
     CURRENT_QUESTION = 0;
     CORRECT_ANSWER_COUNT = 0;
     QUESTIONS_ANSWERED = 0;
-    $(".js-hide-while-taking-quiz").hide();
-    $("#js-quiz-section").show();
-    $("#js-quiz-results").empty();
+    $(HIDDEN_ELEMENTS).hide();
+    $(QUIZ_SECTION).show();
+    $(QUIZ_RESULTS).empty();
     $(showQuestion);
   });
 }
 
 function loadPage() {
   $(".js-quiz-start").on("click", function(event) {
-    $(".js-hide-while-taking-quiz").hide();
-    $("#js-quiz-section").show();
+    $(HIDDEN_ELEMENTS).hide();
+    $(QUIZ_SECTION).show();
     $(showQuestion);
   });
 }
