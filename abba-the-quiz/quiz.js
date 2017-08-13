@@ -180,7 +180,8 @@ function showQuestion() {
 
 function showResults() {
   $(QUIZ_SECTION).hide();
-  $(QUIZ_RESULTS).show().prepend(renderResults);
+  $(QUIZ_RESULTS).empty().prepend(renderResults);
+  $(".js-quiz-results-container").show();
 }
 
 function increaseQuestionCount(index) {
@@ -209,28 +210,49 @@ function findCorrectAnswer() {
   return correctAnswerIndex;
 }
 
-function showCorrectAnswer() {
+function showAnswer(rightWrong) {
+  const answer = $(`.${QUIZ_INPUT_CLASS}:checked`);
+  const evaluation = evaluateAnswer(rightWrong);
   const correctAnswerIndex = findCorrectAnswer() + 1;
   const correctAnswer = $(`.${QUIZ_INPUT_CLASS}:nth-of-type(${correctAnswerIndex})`);
-  const correctInsert = "<span class='quiz-form__response'>correct!</span>"
+  const correctInsert = "<span class='quiz-form__response'>correct!</span>";
 
-  $(correctAnswer).addClass("correct-answer").next(`.${QUIZ_OPTION_CLASS}`).append(correctInsert);
+  if (evaluation == "empty") {
+    alert("You must choose an answer!");
+  }
+  else if (evaluation == "correct") {
+    CORRECT_ANSWER_COUNT++;
+    $(QUIZ_NEXT_ACTION).show();
+    $(`#${QUIZ_FORM_ID}`).find(':input[type=submit]').prop('disabled', true);
+    $(correctAnswer).addClass("correct-answer").next(`.${QUIZ_OPTION_CLASS}`).append(correctInsert);
+  }
+  else if (evaluation == "wrong") {
+    $(QUIZ_NEXT_ACTION).show();
+    $(`#${QUIZ_FORM_ID}`).find(':input[type=submit]').prop('disabled', true);
+    $(answer).addClass("wrong-answer");
+    $(answer).next(`.${QUIZ_OPTION_CLASS}`).append("<span class='quiz-form__response'>wrong!</span>");
+    $(correctAnswer).addClass("correct-answer").next(`.${QUIZ_OPTION_CLASS}`).append(correctInsert);
+  }
 }
 
 function evaluateAnswer() {
   const currentQuestion = QUIZ[CURRENT_QUESTION_INDEX];
   const answer = $(`.${QUIZ_INPUT_CLASS}:checked`);
   const answerValue = answer.val();
+  let evaluation = "";
 
-  if (answerValue === currentQuestion.answer) {
-    CORRECT_ANSWER_COUNT++;
+  if (answerValue == undefined) {
+    evaluation = "empty";
+  }
+  else if (answerValue === currentQuestion.answer) {
+    evaluation = "correct";
+    QUESTIONS_ANSWERED++;
   }
   else {
-    $(answer).addClass("wrong-answer");
-    $(answer).next(`.${QUIZ_OPTION_CLASS}`).append("<span class='quiz-form__response'>wrong!</span>");
+    evaluation = "wrong";
+    QUESTIONS_ANSWERED++;
   }
-
-  QUESTIONS_ANSWERED++;
+  return evaluation;
 }
 
 function clearForm() {
@@ -238,18 +260,11 @@ function clearForm() {
   form.reset();
 }
 
-function disableFormSubmission() {
-  $(`#${QUIZ_FORM_ID}`).find(':input[type=submit]').prop('disabled', true);
-}
-
 function submitAnswer() {
   $(`#${QUIZ_FORM_ID}`).submit(function(event) {
     event.preventDefault();
 
-    $(QUIZ_NEXT_ACTION).show();
-    disableFormSubmission();
-    showCorrectAnswer();
-    evaluateAnswer();
+    showAnswer();
   });
 }
 
@@ -263,6 +278,7 @@ function loadQuestion() {
     showQuestionCount();
     showScore();
     showQuestion();
+    findCorrectAnswer();
   });
 }
 
@@ -284,9 +300,8 @@ function startQuiz() {
 
 function theQuiz() {
   startQuiz();
-  findCorrectAnswer();
-  submitAnswer();
   loadQuestion();
+  submitAnswer();
 }
 
 $(theQuiz);
