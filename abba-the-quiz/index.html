@@ -23,12 +23,24 @@
 
       <section class="quiz-section" id="js-quiz-section">
         <div class="quiz-section__wrapper">
-          <div class="quiz-section__content" id="js-quiz-question">
+          <div class="quiz-section__content">
+            <header class="quiz-section__header">
+              <h2 class="js-question-count"></h2>
+              <h2 class="js-score"></h2>
+            </header>
+            <form class="quiz-form" id="js-quiz-form">
+            </form>
+            <footer class="quiz-section__footer">
+              <a href="#" class="js-next-question quiz-section__next">
+                Next question &rarr;
+              </a>
+            </footer>
           </div>
         </div>
       </section>
 
       <section class="non-quiz-section quiz-results js-hide-while-taking-quiz" id="js-quiz-results">
+        <button type="reset" class="js-quiz-start">Try again</button>
       </section>
 
     </main>
