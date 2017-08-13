@@ -181,9 +181,6 @@ function showQuestion() {
 function showResults() {
   $(QUIZ_SECTION).hide();
   $(QUIZ_RESULTS).show().prepend(renderResults);
-  CURRENT_QUESTION_INDEX = 0;
-  CORRECT_ANSWER_COUNT = 0;
-  QUESTIONS_ANSWERED = 0;
 }
 
 function increaseQuestionCount(index) {
@@ -253,7 +250,6 @@ function submitAnswer() {
     disableFormSubmission();
     showCorrectAnswer();
     evaluateAnswer();
-    showNextButton();
   });
 }
 
@@ -273,6 +269,10 @@ function loadQuestion() {
 function startQuiz() {
   $(QUIZ_LOAD_ACTION).on("click", function(event){
     event.preventDefault();
+
+    CURRENT_QUESTION_INDEX = 0;
+    CORRECT_ANSWER_COUNT = 0;
+    QUESTIONS_ANSWERED = 0;
 
     $(HIDDEN_ELEMENTS).hide();
     $(QUIZ_SECTION).show();
