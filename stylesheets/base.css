@@ -54,8 +54,11 @@ main {
 }
 
 a {
+  border-bottom: 2px solid transparent;
   color: #50bc8a;
+  display: inline-block;
   fill: currentColor;
+  padding-bottom: 3px;
   text-decoration: none;
   transition: all 250ms ease;
 }
@@ -64,6 +67,11 @@ a:focus,
 a:hover {
   color: #0681b1;
   fill: currentColor;
+}
+
+a:focus {
+  border-color: #0681b1;
+  outline: 0;
 }
 
 .logo {
