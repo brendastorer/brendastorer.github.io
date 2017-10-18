@@ -89,6 +89,15 @@ a:focus {
   margin: 0 0.6em 1em;
 }
 
+.icon-nav__link {
+  transition: opacity 500ms ease;
+}
+
+.icon-nav__link.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .pop-up {
   background-image: linear-gradient(rgba(6, 129, 177, 0.6), rgba(80, 188, 138, 0.6));
   opacity: 0;
@@ -111,6 +120,7 @@ a:focus {
 }
 
 .pop-up a {
+  border: none;
   color: white;
 }
 

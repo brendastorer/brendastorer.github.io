@@ -87,6 +87,7 @@
         c0.764-0.092,1.49-0.293,2.168-0.594C18.694,5.051,18.054,5.715,17.316,6.246z"/>
       </symbol>
       <symbol id="icon_close-x" viewBox="0 0 12 12">
+        <title>Close window</title>
         <path d="M11.235 9.966l-3.809-3.81 3.81-3.808a.898.898 0 0 0-1.27-1.27l-3.81 3.81-3.808-3.81a.898.898 0 0 0-1.27 1.27l3.81 3.809-3.81 3.809a.898.898 0 0 0 1.27 1.27l3.809-3.81 3.809 3.81a.898.898 0 0 0 1.27-1.27" />
       </symbol>
     </svg>
@@ -129,49 +130,49 @@
       <nav class="icon-nav">
         <ul>
           <li class="icon-nav__item">
-            <a href="#" class="js-presentations__open">
+            <a href="#" class="js-presentations__open js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="20">
                 <use xlink:href="#icon_presentations" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="#" class="js-podcasts__open">
+            <a href="#" class="js-podcasts__open js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="21">
                 <use xlink:href="#icon_podcasts" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="http://codepen.io/brendamarienyc/" target="_blank" rel="noopener">
+            <a href="http://codepen.io/brendamarienyc/" target="_blank" rel="noopener" class="js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <use xlink:href="#icon_codepen" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="http://github.com/brendastorer" target="_blank" rel="noopener">
+            <a href="http://github.com/brendastorer" target="_blank" rel="noopener" class="js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <use xlink:href="#icon_github" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="http://twitter.com/brendamarienyc" target="_blank" rel="noopener">
+            <a href="http://twitter.com/brendamarienyc" target="_blank" rel="noopener" class="js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <use xlink:href="#icon_twitter" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="https://www.linkedin.com/in/brendastorer" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/brendastorer" target="_blank" rel="noopener" class="js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
                 <use xlink:href="#icon_linkedin" />
               </svg>
             </a>
           </li>
           <li class="icon-nav__item">
-            <a href="mailto:brendastorer@mac.com">
+            <a href="mailto:brendastorer@mac.com" class="js-icon-nav-link icon-nav__link">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16">
                 <use xlink:href="#icon_email" />
               </svg>
@@ -181,11 +182,6 @@
       </nav>
     </main>
     <aside class="pop-up js-presentations">
-      <a href="#" class="pop-up__close js-pop-up__close">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-          <use xlink:href="#icon_close-x" />
-        </svg>
-      </a>
       <section class="pop-up__content">
         <h1 class="pop-up__heading">Presentations & Publications</h1>
         <nav class="pop-up__nav">
@@ -213,13 +209,13 @@
           </ul>
         </nav>
       </section>
-    </aside>
-    <aside class="pop-up js-podcasts">
       <a href="#" class="pop-up__close js-pop-up__close">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
           <use xlink:href="#icon_close-x" />
         </svg>
       </a>
+    </aside>
+    <aside class="pop-up js-podcasts">
       <section class="pop-up__content">
         <h1 class="pop-up__heading">Podcasts</h1>
         <nav class="pop-up__nav">
@@ -262,6 +258,11 @@
           </ul>
         </nav>
       </section>
+      <a href="#" class="pop-up__close js-pop-up__close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <use xlink:href="#icon_close-x" />
+        </svg>
+      </a>
     </aside>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="./javascript/pop-up.js"></script>
