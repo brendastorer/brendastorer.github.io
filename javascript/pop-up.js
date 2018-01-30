@@ -1,4 +1,11 @@
 $(function() {
+  $(".js-portfolio__open").on("click", function(event) {
+    event.preventDefault();
+    $(".js-portfolio").addClass("show");
+    $(".js-main").addClass("blur");
+    $(".js-icon-nav-link").addClass("hide");
+  });
+
   $(".js-presentations__open").on("click", function(event) {
     event.preventDefault();
     $(".js-presentations").addClass("show");
@@ -15,7 +22,7 @@ $(function() {
 
   $(".js-pop-up__close").on("click", function(event) {
     event.preventDefault();
-    $(".js-presentations, .js-podcasts").removeClass("show");
+    $(".js-presentations, .js-podcasts, .js-portfolio").removeClass("show");
     $(".js-main").removeClass("blur");
     $(".js-icon-nav-link").removeClass("hide");
   });
