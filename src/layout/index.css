@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400italic');
+
+:root {
+  --color-white: #ffffff;
+  --color-green: #50bc8a;
+  --color-blue: #0681b1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--color-green);
+  font-family: "Lato", helvetica, arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.4;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+a {
+  border-bottom: 2px solid transparent;
+  color: var(--color-green);
+  display: inline-block;
+  fill: currentColor;
+  padding-bottom: 3px;
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+a:focus,
+a:hover {
+  color: var(--color-blue);
+  fill: currentColor;
+}
+
+a:focus {
+  border-color: var(--color-blue);
+  outline: 0;
+}
+
+.logo {
+  height: auto;
+  max-width: 315px;
+  width: 100%;
+}
+
+.subheading {
+  font-size: 1.15rem;
+  margin: 1em 0;
+}
+
+.icon-nav__item {
+  display: inline-block;
+  margin: 0 0.45em 1em;
+}
+
+.icon-nav__link {
+  transition: opacity 500ms ease;
+}
+
+.icon-nav__link.hide {
+  opacity: 0;
+  visibility: hidden;
+}
