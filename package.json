@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-advanced",
-  "description": "GatsbyJS starter that includes examples for advanced use cases.",
+  "name": "brenda-storer",
+  "description": "Brenda Storer | Front End Developer & Designer",
   "version": "1.1.0",
-  "author": "Ruben Harutyunyan <vagr9k@gmail.com>",
+  "author": "Brenda Storer <brendastorer@gmail.com>",
   "dependencies": {
     "gatsby": "2.0.91",
     "gatsby-cli": "^2.4.16",

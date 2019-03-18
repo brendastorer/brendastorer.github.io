@@ -4,40 +4,89 @@
   --color-white: #ffffff;
   --color-green: #50bc8a;
   --color-blue: #0681b1;
+  --color-gray--dark: #3b4042;
+  --action-color: var(--color-blue);
+  --hover-color: var(--color-blue);
+  --base-font-color: var(--color-gray--dark);
+  --button-background--primary: var(--action-color);
+  --button-background--primary-hover: var(--hover-color);
+  --font-family--body: "Lato", helvetica, arial, sans-serif;
+  --font-weight--bold: 600;
+  --font-weight--body: 400;
+  --font-weight--heading: 600;
+  --line-height--body: 1.5;
+  --line-height--heading: 1.2;
 }
 
-* {
-  box-sizing: border-box;
-}
+/* Layout */
 
 html {
+  background-color: var(--color--white);
+  box-sizing: border-box;
   font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
 body {
   background-color: var(--color-white);
-  color: var(--color-green);
-  font-family: "Lato", helvetica, arial, sans-serif;
+  color: var(--base-font-color);
+  font-family: var(--font-family--body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  height: 100%;
-  line-height: 1.4;
-  padding: 1rem;
-  text-align: center;
+  font-weight: var(--font-weight--body);
+  line-height: var(--line-height--body);
 }
 
 main {
-  margin: 0 auto;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
+  margin: 0;
+}
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight--heading);
+  line-height: var(--line-height--heading);
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+hr {
+  border-bottom: 1px;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: 1rem 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   border-bottom: 2px solid transparent;
-  color: var(--color-green);
+  color: var(--action-color);
   display: inline-block;
   fill: currentColor;
   padding-bottom: 3px;
@@ -47,13 +96,74 @@ a {
 
 a:focus,
 a:hover {
-  color: var(--color-blue);
+  color: var(--hover-color);
   fill: currentColor;
 }
 
 a:focus {
-  border-color: var(--color-blue);
+  border-color: var(--hover-color);
   outline: 0;
+}
+
+/* Media */
+
+figure {
+  margin: 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+/* Buttons */
+
+button,
+.button {
+  appearance: none;
+  background-color: var(--button-background--primary);
+  border: 0;
+  border-radius: 3px;
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight--body);
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--button-background--primary-hover);
+  color: var(--color-white);
+}
+
+button:focus,
+.button:focus {
+  outline: var(--action-color);
+  outline-offset: 2px;
+}
+
+button:disabled,
+.button:disabled {
+  background-color: var(--color-gray--dark);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:disabled:hover,
+.button:disabled:hover {
+  background-color: var(--color-gray--dark);
 }
 
 .logo {
