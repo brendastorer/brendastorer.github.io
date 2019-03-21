@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Sofia Pro Light';
+  src: url('../fonts/SofiaProLight-webfont.woff2') format('woff2'),
+       url('../fonts/SofiaProLight-webfont.woff') format('woff'),
+       url('../fonts/SofiaProLight-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Silver South Serif';
+  src: url('../fonts/SilverSouthSerif-webfont.woff2') format('woff2'),
+       url('../fonts/SilverSouthSerif-webfont.woff') format('woff'),
+       url('../fonts/SilverSouthSerif-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-white: rgb(255, 255, 255);
+  --color-black: rgb(18, 19, 19);
+  --color-green: rgb(55, 173, 118);
+  --color-green--with-alpha-50: rgba(55, 173, 118, 0.5);
+  --color-blue: rgb(6, 129, 177);
+  --color-blue--with-alpha-50: rgba(6, 129, 177, 0.5);
+  --color-gray--light: rgb(200, 210, 214);
+  --color-gray--medium: rgb(97, 106, 109);
+  --color-gray--dark: rgb(59, 64, 66);
+  --primary-accent-color: var(--color-blue);
+  --primary-accent-color--with-alpha-50: var(--color-blue--with-alpha-50);
+  --secondary-accent-color: var(--color-green);
+  --secondary-accent-color--with-alpha-50: var(--color-green--with-alpha-50);
+  --base-font-color: var(--color-gray--dark);
+  --button-background--primary: var(--primary-accent-color);
+  --button-background--primary-hover: var(--hover-color);
+  --font-family--body: "Sofia Pro Light", helvetica, arial, sans-serif;
+  --font-family--heading: "Sofia Pro Light", helvetica, arial, sans-serif;
+  --font-family--heading-alt: "Silver South Serif", georgia, serif;
+  --font-weight--bold: 600;
+  --font-weight--body: 400;
+  --font-weight--heading: 200;
+  --line-height--body: 1.5;
+  --line-height--heading: 1.2;
+  --post-center-column-padding: 2.5rem;
+  --post-center-column-width: 73ch;
+}

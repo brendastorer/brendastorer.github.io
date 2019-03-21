@@ -3,7 +3,6 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
 import SocialLinks from "../components/SocialLinks/SocialLinks";
 import SEO from "../components/SEO/SEO";
@@ -24,22 +23,31 @@ export default class PostTemplate extends React.Component {
     }
     return (
       <Layout>
-        <div>
+        <article className="post">
           <Helmet>
             <title>{`${post.title} | ${config.siteTitle}`}</title>
           </Helmet>
           <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-            <div className="post-meta">
-              <PostTags tags={post.tags} />
-              <SocialLinks postPath={slug} postNode={postNode} />
+          <figure className="post__featured-image-container">
+            <img src={post.cover} alt="" className="post__featured-image" />
+          </figure>
+          <header className="post__header">
+            <div className="post__meta">
+              <time>{post.date}</time>
             </div>
-            <UserInfo config={config} />
-            <Disqus postNode={postNode} />
+            <h1 className="post__title">
+              {post.title}
+            </h1>
+          </header>
+          <section className="post__body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          <div className="post__tags">
+            <PostTags tags={post.tags} />
           </div>
-        </div>
+          <div className="post__socials">
+            <UserInfo config={config} />
+            <SocialLinks postPath={slug} postNode={postNode} />
+          </div>
+        </article>
       </Layout>
     );
   }

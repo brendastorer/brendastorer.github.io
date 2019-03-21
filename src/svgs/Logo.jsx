@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Logo = () => (
-  <svg className="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.3 152.8" height="153" width="288">
+const Logo = (props) => (
+  <svg className={props.className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.3 152.8" height="212" width="400">
     <title>Brenda Storer</title>
     <linearGradient id="blue-green" gradientUnits="userSpaceOnUse" x1="144.147" y1="-8.9282" x2="144.147" y2="232.8967">
       <stop offset="3.296700e-02" style={{ stopColor: '#0681B1' }} />

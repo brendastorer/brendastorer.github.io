@@ -1,0 +1,24 @@
+.navigation li {
+  display: inline-block;
+  margin: 0 0.75rem;
+}
+
+.navigation a {
+  color: var(--secondary-accent-color);
+  font-size: 1.15rem;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+  line-height: var(--line-height--heading);
+}
+
+.navigation a:focus,
+.navigation a:hover {
+  border-color: var(--secondary-accent-color--with-alpha-50);
+  color: var(--secondary-accent-color);
+}
+
+.navigation a:focus {
+  border-color: var(--primary-accent-color--with-alpha-50);
+  color: var(--primary-accent-color);
+  outline: 0;
+}

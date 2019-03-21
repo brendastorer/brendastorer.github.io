@@ -1,2 +1,4 @@
-.social-links {
+.social-links__button {
+  cursor: pointer;
+  display: inline-block;
 }

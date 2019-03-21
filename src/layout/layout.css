@@ -1,0 +1,31 @@
+html {
+  background-color: var(--color--white);
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: var(--color-white);
+  color: var(--base-font-color);
+  font-family: var(--font-family--body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: var(--font-weight--body);
+  line-height: var(--line-height--body);
+}
+
+main {
+  margin: 0;
+}
