@@ -3,12 +3,12 @@ import React from 'react';
 const Logo = (props) => (
   <svg className={props.className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288.3 152.8" height="212" width="400">
     <title>Brenda Storer</title>
-    <linearGradient id="blue-green" gradientUnits="userSpaceOnUse" x1="144.147" y1="-8.9282" x2="144.147" y2="232.8967">
-      <stop offset="3.296700e-02" style={{ stopColor: '#0681B1' }} />
-      <stop offset="1" style={{ stopColor: '#50BC8A' }} />
+    <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="144.147" y1="-8.9282" x2="144.147" y2="232.8967">
+      <stop offset="1%" style={{ stopColor: 'rgb(94, 73, 155)' }} />
+      <stop offset="80%" style={{ stopColor: 'rgb(6, 129, 177)' }} />
     </linearGradient>
     <path
-      fill="url(#blue-green)"
+      fill="url(#gradient)"
       d="M19.5,113.9c-9.5-1.5-16.3-7.7-16.3-16.6c0-9,7.3-15.6,16.2-15.6c8.2,0,14.9,6,16.1,13.7l1.8-0.2
       c-1.4-8.7-8.7-15.3-17.8-15.3c-9.8,0-17.9,7.4-17.9,17.3s7.3,16.8,17.7,18.4c11.4,1.8,17.9,7.9,17.9,17.6
       c0,9.8-7.9,17.7-17.7,17.7c-9.2,0-16.9-7.2-17.6-16.4L0,134.7c0.7,10,9.1,18,19.4,18c10.8,0,19.5-8.7,19.5-19.5
@@ -32,7 +32,8 @@ const Logo = (props) => (
       c0.5-12.6,10.9-22.7,23.7-22.7c13.1,0,23.8,10.6,23.8,23.7c0,13.1-10.7,23.7-23.8,23.7c-13.1,0-23.7-10.6-23.7-23.7V46.5z
         M169.9,43.6v26.2h-2.4v1.8h6.5v-1.8h-2.3V43.6c0-12-9.7-21.7-21.7-21.7c-8.8,0-16.6,5.4-19.9,13.1V23.2h-4.2V25h2.4v44.8h-2.4
       v1.8h6.6v-1.8h-2.4V43.6c0-11,8.9-20,19.9-20C160.9,23.6,169.9,32.6,169.9,43.6z M65.1,69.8h-2.3V38.5c0-7.9,7-14.9,15.4-14.9
-      v-1.8c-6.8,0-12.6,4-15.4,9.6v-8.2h-4.2V25H61v44.8h-2.4v1.8h6.5V69.8z"/>
+      v-1.8c-6.8,0-12.6,4-15.4,9.6v-8.2h-4.2V25H61v44.8h-2.4v1.8h6.5V69.8z"
+    />
   </svg>
 );
 

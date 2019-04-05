@@ -9,6 +9,8 @@ import About from "../components/About/About";
 import Speaking from "../components/Speaking/Speaking";
 import ProjectThumbnails from "../components/ProjectThumbnails/ProjectThumbnails";
 import Podcasts from "../components/Podcasts/Podcasts";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
 
 class Index extends React.Component {
@@ -22,10 +24,12 @@ class Index extends React.Component {
           <Hero />
           <About />
           <ProjectThumbnails />
-          <PostListing postEdges={postEdges} />
           <Speaking />
+          <PostListing postEdges={postEdges} />
           <Podcasts />
+          <Contact />
         </main>
+        <Footer />
       </Layout>
     );
   }

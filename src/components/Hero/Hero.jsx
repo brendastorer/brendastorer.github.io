@@ -9,7 +9,7 @@ class Hero extends Component {
       <section className="hero">
         <div>
           <Logo className="hero__logo" />
-          <h2 className="hero__subheading">web designer & developer</h2>
+          <h2 className="hero__subheading">front-end developer & designer</h2>
         </div>
         <Navigation />
       </section>

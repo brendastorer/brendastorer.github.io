@@ -4,18 +4,18 @@ h3,
 h4,
 h5,
 h6 {
-  /* background: linear-gradient(var(--color-blue), var(--color-green)); */
-  color: var(--color-blue);
+  background: linear-gradient(var(--secondary-accent-color), var(--primary-accent-color));
+  color: var(--secondary-accent-color);
   font-family: var(--font-family--heading);
   font-weight: var(--font-weight--heading);
   line-height: var(--line-height--heading);
-  margin: 0 0 1rem;
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  margin: 0 0 1.25rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 p {
-  margin: 0 0 1em;
+  margin: 0 0 1.5rem;
 }
 
 hr {
@@ -45,12 +45,12 @@ a {
 
 a:focus,
 a:hover {
-  border-color: var(--primary-accent-color--with-alpha-50);
-  color: var(--primary-accent-color);
+  border-color: var(--secondary-accent-color--with-alpha-50);
+  color: var(--secondary-accent-color);
 }
 
 a:focus {
-  border-color: var(--secondary-accent-color--with-alpha-50);
-  color: var(--secondary-accent-color);
+  border-color: var(--primary-accent-color--with-alpha-50);
+  color: var(--primary-accent-color);
   outline: 0;
 }

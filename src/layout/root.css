@@ -19,20 +19,26 @@
 :root {
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(18, 19, 19);
-  --color-green: rgb(55, 173, 118);
-  --color-green--with-alpha-50: rgba(55, 173, 118, 0.5);
+  --color-green: rgb(59, 177, 122);
+  --color-green--with-alpha-50: rgba(59, 177, 122, 0.5);
   --color-blue: rgb(6, 129, 177);
   --color-blue--with-alpha-50: rgba(6, 129, 177, 0.5);
+  --color-blue--with-alpha-005: rgba(6, 129, 177, 0.05);
+  --color-purple: rgb(94, 73, 155);
+  --color-purple--with-alpha-50: rgba(94, 73, 155, 0.5);
+  --color-purple--with-alpha-005: rgba(94, 73, 155, 0.05);
   --color-gray--light: rgb(200, 210, 214);
   --color-gray--medium: rgb(97, 106, 109);
-  --color-gray--dark: rgb(59, 64, 66);
+  --color-gray--dark: rgb(36, 39, 41);
+
   --primary-accent-color: var(--color-blue);
   --primary-accent-color--with-alpha-50: var(--color-blue--with-alpha-50);
-  --secondary-accent-color: var(--color-green);
-  --secondary-accent-color--with-alpha-50: var(--color-green--with-alpha-50);
+  --secondary-accent-color: var(--color-purple);
+  --secondary-accent-color--with-alpha-50: var(--color-purple--with-alpha-50);
   --base-font-color: var(--color-gray--dark);
   --button-background--primary: var(--primary-accent-color);
   --button-background--primary-hover: var(--hover-color);
+
   --font-family--body: "Sofia Pro Light", helvetica, arial, sans-serif;
   --font-family--heading: "Sofia Pro Light", helvetica, arial, sans-serif;
   --font-family--heading-alt: "Silver South Serif", georgia, serif;
@@ -40,7 +46,9 @@
   --font-weight--body: 400;
   --font-weight--heading: 200;
   --line-height--body: 1.5;
-  --line-height--heading: 1.2;
+  --line-height--heading: 1.3;
+
   --post-center-column-padding: 2.5rem;
   --post-center-column-width: 73ch;
+  --container-max-width: 100rem;
 }

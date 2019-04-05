@@ -1,20 +1,24 @@
 .hero {
   align-items: flex-end;
-  justify-content: space-between;
   display: flex;
   height: 100vh;
+  justify-content: space-between;
+  max-width: var(--container-max-width);
   padding: 2rem;
 }
 
 .hero__logo {
   height: auto;
-  margin-bottom: 0.25rem;
-  max-width: 400px;
+  margin-bottom: 0.5rem;
+  max-width: 350px;
   width: 100%;
 }
 
 .hero__subheading {
-  color: var(--secondary-accent-color);
-  font-size: 1.87rem;
+  background: currentColor;
+  color: var(--primary-accent-color);
+  font-size: 1.37rem;
   margin-bottom: 0.25rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

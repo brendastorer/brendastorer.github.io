@@ -31,6 +31,11 @@ class PostListing extends React.Component {
               </Link>
             </li>
           ))}
+          <li>
+            <a href="https://www.heartinternet.uk/blog/fearless-guide-using-css-grid-today/" target="_blank" rel="noreferrer noopener">
+              A Fearless Guide to Using CSS Grid Today &mdash; published by Heart Internet
+            </a>
+          </li>
         </ul>
       </div>
     );

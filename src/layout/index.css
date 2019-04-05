@@ -11,22 +11,3 @@
     display: none;
   }
 }
-
-.subheading {
-  font-size: 1.15rem;
-  margin: 1em 0;
-}
-
-.icon-nav__item {
-  display: inline-block;
-  margin: 0 0.45em 1em;
-}
-
-.icon-nav__link {
-  transition: opacity 500ms ease;
-}
-
-.icon-nav__link.hide {
-  opacity: 0;
-  visibility: hidden;
-}

@@ -4,21 +4,11 @@
 }
 
 .navigation a {
-  color: var(--secondary-accent-color);
-  font-size: 1.15rem;
-  -webkit-font-smoothing: initial;
-  -moz-osx-font-smoothing: initial;
+  font-size: 1.1rem;
   line-height: var(--line-height--heading);
 }
 
-.navigation a:focus,
-.navigation a:hover {
-  border-color: var(--secondary-accent-color--with-alpha-50);
-  color: var(--secondary-accent-color);
-}
-
-.navigation a:focus {
-  border-color: var(--primary-accent-color--with-alpha-50);
-  color: var(--primary-accent-color);
-  outline: 0;
+.navigation svg {
+  height: 1em;
+  width: 1em;
 }

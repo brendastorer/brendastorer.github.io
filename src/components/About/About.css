@@ -1,2 +1,11 @@
 .about {
+  padding: 4rem 2rem 0;
+}
+
+.about__content {
+  display: grid;
+  grid-gap: 6rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: var(--container-max-width);
 }

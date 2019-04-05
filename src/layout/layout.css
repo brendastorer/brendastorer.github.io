@@ -20,8 +20,6 @@ body {
   background-color: var(--color-white);
   color: var(--base-font-color);
   font-family: var(--font-family--body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: var(--font-weight--body);
   line-height: var(--line-height--body);
 }
