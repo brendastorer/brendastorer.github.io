@@ -7,7 +7,7 @@ class About extends Component {
       <section className="about" id="about">
         <div className="about__content">
           <div className="about__copy">
-            <h2>
+            <h2 className="gradient-heading">
               Hi, I'm Brenda. I love CSS, e-commerce, beautiful and thoughtful design, dancing to good and bad pop music, and making my own natural skincare products.
             </h2>
             <p>

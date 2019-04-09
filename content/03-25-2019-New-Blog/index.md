@@ -1,11 +1,10 @@
 ---
-title: "Angels of Mist"
+title: "New Blog, New Gigs"
 cover: "https://unsplash.it/400/300/?random?AngelsofMist"
-category: "test3"
-date: "01/03/2017"
+category: "CSS Grid"
+date: "03/25/2019"
 tags:
-    - cheese
-    - other
+    - Freelancing
 ---
 # Ab dicemur cura
 

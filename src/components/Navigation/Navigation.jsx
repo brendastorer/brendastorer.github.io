@@ -21,13 +21,13 @@ class Navigation extends Component {
             </a>
           </li>
           <li>
-            <a href="#speaking">
-              Speaking
+            <a href="#writing">
+              Writing
             </a>
           </li>
           <li>
-            <a href="#writing">
-              Writing
+            <a href="#speaking">
+              Speaking
             </a>
           </li>
           <li>

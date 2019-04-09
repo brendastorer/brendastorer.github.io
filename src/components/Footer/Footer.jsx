@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <div className="footer__copyright">
-          <h4>&copy; 2019 Brenda Storer</h4>
+          <h4>&copy; 2019 Brenda Storer. Built with GatsbyJS.</h4>
         </div>
       </footer>
     );

@@ -1,3 +1,5 @@
 .speaking {
-
+  margin-top: -8rem;
+  position: relative;
+  z-index: var(--content-z-index);
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import "./PostListing.css";
 
 class PostListing extends React.Component {
   getPostList() {
@@ -21,23 +22,30 @@ class PostListing extends React.Component {
   render() {
     const postList = this.getPostList();
     return (
-      <div className="post-listing" id="writing">
-        <h2>Writing</h2>
-        <ul>
-          {postList.map(post => (
-            <li>
-              <Link to={post.path} key={post.title}>
-                {post.title}
-              </Link>
-            </li>
-          ))}
+      <ul className="post-listing">
+        {postList.map(post => (
           <li>
-            <a href="https://www.heartinternet.uk/blog/fearless-guide-using-css-grid-today/" target="_blank" rel="noreferrer noopener">
-              A Fearless Guide to Using CSS Grid Today &mdash; published by Heart Internet
-            </a>
+            <Link to={post.path} key={post.title} className="post-listing__link">
+              <h3 className="post-listing__title-solid">
+                {post.title}
+              </h3>
+              <span className="post-listing__title-outline" aria-hidden="true">
+                {post.title}
+              </span>
+            </Link>
           </li>
-        </ul>
-      </div>
+        ))}
+        <li>
+          <a href="https://www.heartinternet.uk/blog/fearless-guide-using-css-grid-today/" target="_blank" rel="noreferrer noopener" className="post-listing__link">
+            <h3 className="post-listing__title-solid">
+              A Fearless Guide to Using CSS Grid Today
+              </h3>
+              <span className="post-listing__title-outline" aria-hidden="true">
+                A Fearless Guide to Using CSS Grid Today
+              </span>
+          </a>
+        </li>
+      </ul>
     );
   }
 }

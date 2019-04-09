@@ -6,17 +6,19 @@ class PostTags extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <div className="post-tags">
+      <ul className="post-tags">
         {tags &&
           tags.map(tag => (
-            <Link
-              key={tag}
-              to={`/tags/${_.kebabCase(tag)}`}
-            >
-              {tag}
-            </Link>
+            <li>
+              <Link
+                key={tag}
+                to={`/tags/${_.kebabCase(tag)}`}
+              >
+                {tag}
+              </Link>
+            </li>
           ))}
-      </div>
+      </ul>
     );
   }
 }

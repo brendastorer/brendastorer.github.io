@@ -5,6 +5,7 @@ import "./root.css";
 import "./layout.css";
 import "./typography.css";
 import "./media.css";
+import "./forms.css";
 import "./buttons.css";
 import "./index.css";
 

@@ -49,9 +49,6 @@
     "prettier": "^1.16.0",
     "remark-cli": "^6.0.1",
     "remark-preset-lint-recommended": "^3.0.1",
-    "stylefmt": "^6.0.3",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.0.0",
     "write-good": "^1.0.1"
   },
   "keywords": [

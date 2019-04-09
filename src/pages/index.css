@@ -1,0 +1,9 @@
+.index__grouped {
+  background-color: var(--soft-background-color--primary);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  padding: 0 2rem 4rem;
+}

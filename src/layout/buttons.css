@@ -1,18 +1,17 @@
 button,
 .button {
   appearance: none;
-  background-color: var(--button-background--primary);
-  border: 0;
-  border-radius: 3px;
+  background-color: transparent;
+  border: 3px solid var(--color-white--with-alpha-50);
+  border-radius: 0;
   color: var(--color-white);
   cursor: pointer;
   display: inline-block;
   font-family: var(--font-family);
   font-size: 1rem;
-  -webkit-font-smoothing: antialiased;
   font-weight: var(--font-weight--body);
   line-height: 1;
-  padding: 0.25em 0.5em;
+  padding: 0.5em 2em 0.7em;
   text-align: center;
   text-decoration: none;
   transition: background-color 150ms ease;
@@ -23,13 +22,13 @@ button,
 
 button:hover,
 .button:hover {
-  background-color: var(--button-background--primary-hover);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--base-font-color);
 }
 
 button:focus,
 .button:focus {
-  outline: var(--button-background--primary-hover);
+  outline: 2px solid var(--color-white);
   outline-offset: 2px;
 }
 

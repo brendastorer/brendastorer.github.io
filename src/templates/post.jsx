@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
+import moment from 'moment';
 import Layout from "../layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import PostTags from "../components/PostTags/PostTags";
@@ -33,11 +34,16 @@ export default class PostTemplate extends React.Component {
           </figure>
           <header className="post__header">
             <div className="post__meta">
-              <time>{post.date}</time>
+              <time>{moment(post.date).format("MMMM D, YYYY")}</time>
             </div>
-            <h1 className="post__title">
-              {post.title}
-            </h1>
+            <div className="post__title">
+              <h1 className="post__title-solid">
+                {post.title}
+              </h1>
+              <span className="post__title-outline" aria-hidden="true">
+                {post.title}
+              </span>
+            </div>
           </header>
           <section className="post__body" dangerouslySetInnerHTML={{ __html: postNode.html }} />
           <div className="post__tags">

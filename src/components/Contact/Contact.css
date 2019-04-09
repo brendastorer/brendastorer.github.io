@@ -1,0 +1,28 @@
+.contact {
+  background-color: var(--dark-background-color);
+  color: var(--color-white);
+  padding: 5rem;
+}
+
+.contact__container {
+  margin: 0 auto;
+  max-width: 35rem;
+}
+
+.contact input,
+.contact textarea {
+  display: block;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.contact__form-grouped {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.contact__button-container {
+  margin-top: 1rem;
+  text-align: center;
+}

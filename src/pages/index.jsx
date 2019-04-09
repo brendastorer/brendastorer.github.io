@@ -3,15 +3,16 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import Layout from "../layout";
 import Hero from "../components/Hero/Hero";
-import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import About from "../components/About/About";
 import Speaking from "../components/Speaking/Speaking";
 import ProjectThumbnails from "../components/ProjectThumbnails/ProjectThumbnails";
+import Writing from "../components/Writing/Writing";
 import Podcasts from "../components/Podcasts/Podcasts";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 import config from "../../data/SiteConfig";
+import "./index.css";
 
 class Index extends React.Component {
   render() {
@@ -24,9 +25,11 @@ class Index extends React.Component {
           <Hero />
           <About />
           <ProjectThumbnails />
-          <Speaking />
-          <PostListing postEdges={postEdges} />
-          <Podcasts />
+          <Writing postEdges={postEdges} />
+          <div className="index__grouped">
+            <Speaking />
+            <Podcasts />
+          </div>
           <Contact />
         </main>
         <Footer />

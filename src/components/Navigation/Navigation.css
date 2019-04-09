@@ -1,8 +1,3 @@
-.navigation li {
-  display: inline-block;
-  margin: 0 0.75rem;
-}
-
 .navigation a {
   font-size: 1.1rem;
   line-height: var(--line-height--heading);
@@ -11,4 +6,9 @@
 .navigation svg {
   height: 1em;
   width: 1em;
+}
+
+.navigation li {
+  display: inline-block;
+  margin: 0 0.75rem;
 }

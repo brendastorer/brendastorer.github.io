@@ -4,14 +4,10 @@ h3,
 h4,
 h5,
 h6 {
-  background: linear-gradient(var(--secondary-accent-color), var(--primary-accent-color));
-  color: var(--secondary-accent-color);
   font-family: var(--font-family--heading);
   font-weight: var(--font-weight--heading);
   line-height: var(--line-height--heading);
   margin: 0 0 1.25rem;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 p {
@@ -28,29 +24,39 @@ hr {
 
 ul,
 ol {
+  line-height: 1.35;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
+li {
+  margin-bottom: 0.75rem;
+}
+
 a {
-  border-bottom: 2px solid transparent;
+  box-shadow: inset 0 -0.1em transparent;
   color: var(--primary-accent-color);
-  display: inline-block;
+  display: inline;
   fill: currentColor;
   padding-bottom: 2px;
   text-decoration: none;
   transition: all 250ms ease;
 }
 
-a:focus,
+a:focus {
+  box-shadow: inset 0 -0.1em var(--primary-accent-color--with-alpha-50);
+  color: var(--primary-accent-color);
+  outline: 0;
+}
+
 a:hover {
-  border-color: var(--secondary-accent-color--with-alpha-50);
+  box-shadow: inset 0 -0.1em var(--secondary-accent-color--with-alpha-50);
   color: var(--secondary-accent-color);
 }
 
-a:focus {
-  border-color: var(--primary-accent-color--with-alpha-50);
-  color: var(--primary-accent-color);
-  outline: 0;
+.gradient-heading {
+  background: linear-gradient(var(--secondary-accent-color), var(--primary-accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

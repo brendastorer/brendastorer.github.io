@@ -1,2 +1,11 @@
 .footer {
+  background-color: var(--dark-background-color);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }
