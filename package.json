@@ -5,7 +5,7 @@
   "author": "Brenda Storer <brendastorer@gmail.com>",
   "dependencies": {
     "gatsby": "^2.3.14",
-    "gatsby-cli": "^2.5.5",
+    "gatsby-cli": "^2.5.9",
     "gatsby-image": "2.0.26",
     "gatsby-plugin-catch-links": "2.0.9",
     "gatsby-plugin-feed": "2.0.11",
@@ -35,6 +35,7 @@
     "react-helmet": "^5.2.0",
     "react-share": "^2.4.0",
     "react-twitter-widgets": "^1.7.1",
+    "sharp": "^0.22.0",
     "url-join": "^4.0.0"
   },
   "devDependencies": {

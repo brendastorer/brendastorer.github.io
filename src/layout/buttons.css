@@ -2,7 +2,7 @@ button,
 .button {
   appearance: none;
   background-color: transparent;
-  border: 3px solid var(--color-white--with-alpha-50);
+  border: 2px solid var(--color-white--with-alpha-50);
   border-radius: 0;
   color: var(--color-white);
   cursor: pointer;
@@ -28,7 +28,7 @@ button:hover,
 
 button:focus,
 .button:focus {
-  outline: 2px solid var(--color-white);
+  outline: 3px solid var(--primary-accent-color--with-alpha-50);
   outline-offset: 2px;
 }
 

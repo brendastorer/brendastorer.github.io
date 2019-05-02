@@ -4,9 +4,9 @@
 
 .post-listing__link {
   box-shadow: none;
-  display: block;
+  display: inline-block;
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .post-listing__link:hover,
@@ -39,10 +39,10 @@
 }
 
 .post-listing__link:hover .post-listing__title-solid {
-  background: linear-gradient(var(--secondary-accent-color), var(--secondary-accent-color));
+  background: linear-gradient(var(--secondary-accent-color), var(--primary-accent-color));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .post-listing__title-outline {
@@ -66,7 +66,6 @@
 }
 
 .post-listing__link:hover .post-listing__title-outline {
-  color: var(--secondary-accent-color);
-  opacity: 0.4;
+  color: transparent;
   transform: translate(-3px, -2px);
 }

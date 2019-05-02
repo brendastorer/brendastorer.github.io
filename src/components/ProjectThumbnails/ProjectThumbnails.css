@@ -2,8 +2,14 @@
   margin: 0 auto;
   max-width: var(--container-max-width);
   overflow: hidden;
-  padding-bottom: 8rem;
+  padding-bottom: 4rem;
   position: relative;
+}
+
+@media (min-width: 800px) {
+  .project-thumbnails {
+    padding-bottom: 8rem;
+  }
 }
 
 .project-thumbnails::after {
@@ -27,6 +33,18 @@
   padding: 0 2rem;
 }
 
+@media (min-width: 800px) {
+  .project-thumbnails__list-container,
+  .project-thumbnails__heading-container {
+    background-color: var(--soft-background-color--secondary);
+    padding: 0 4rem;
+  }
+}
+
+.project-thumbnails__list-container {
+  display: flex;
+}
+
 .project-thumbnails h2 {
   margin: 0 auto;
   max-width: 60rem;
@@ -35,27 +53,59 @@
 }
 
 .project-thumbnails__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 0 3rem;
   margin: 0 auto;
-  max-width: 60rem;
   position: relative;
-  transform: rotate(-5deg);
   z-index: var(--content-z-index);
 }
 
-.project-thumbnails li:nth-child(3n + 2) {
-  margin-top: 3rem;
+.project-thumbnails__list li {
+  margin-bottom: 4rem;
+  transform: rotate(-5deg);
 }
 
-.project-thumbnails li:nth-child(3n) {
-  margin-top: 6rem;
+@media (min-width: 800px) {
+  .project-thumbnails__list {
+    display: grid;
+    grid-gap: 0 4rem;
+    grid-template-columns: repeat(2, 320px);
+    transform: rotate(-5deg);
+  }
+
+  .project-thumbnails__list li {
+    margin-bottom: 0;
+    transform: rotate(0deg);
+  }
+
+  .project-thumbnails__list li:nth-child(even) {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-thumbnails__list {
+    grid-template-columns: repeat(3, 320px);
+    max-width: 60rem;
+  }
+
+  .project-thumbnails__list li:nth-child(even) {
+    margin-top: 0;
+  }
+
+  .project-thumbnails__list li:nth-child(3n + 2) {
+    margin-top: 3rem;
+  }
+
+  .project-thumbnails__list li:nth-child(3n) {
+    margin-top: 6rem;
+  }
 }
 
 .project-thumbnails__title {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
   margin-bottom: 0;
   padding-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .project-thumbnails__image {

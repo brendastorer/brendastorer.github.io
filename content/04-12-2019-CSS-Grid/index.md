@@ -1,6 +1,6 @@
 ---
 title: "CSS Grid on its 2nd Birthday"
-cover: "https://unsplash.it/400/300/?random?AngelsofMist"
+cover: "../article-images/cssgrid-bg.jpg"
 category: "CSS Grid"
 date: "04/12/2019"
 tags:

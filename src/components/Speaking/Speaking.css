@@ -1,5 +1,13 @@
 .speaking {
   margin-top: -8rem;
+  padding: 0 2rem;
   position: relative;
   z-index: var(--content-z-index);
+}
+
+@media (min-width: 800px) {
+  .speaking {
+    margin-top: -8rem;
+    padding: 0;
+  }
 }

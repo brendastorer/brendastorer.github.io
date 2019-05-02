@@ -1,4 +1,5 @@
 .writing {
+  overflow: hidden;
   padding-bottom: 9rem;
   position: relative;
 }
@@ -25,5 +26,5 @@
 }
 
 .writing h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
